@@ -41,6 +41,20 @@ Hi there! 👋 Welcome to My Data Analytics World ✨ 🌸📊 This repository s
 | *Coming Soon* | Interactive Dashboards, Data Modeling, DAX | ... | ⏳ Planned |
 
 ---
+## 📜 Relevant Certifications & Credentials
+
+| Certification | Issuing Organization | Status / Completion | Link |
+| :--- | :--- | :--- | :---: |
+| **Google Data Analytics Professional Certificate** | Coursera / Google | 🟢 Completed | [Verify Certificate](https://www.coursera.org/account/accomplishments/specialization/RTH3F1V5EH8R)|
+| **Google AI Essentials** | Coursera / Google | 🟢 Completed | [Verify Certificate](https://www.coursera.org/account/accomplishments/specialization/1CPRRWOZEO8W) |
+| **SQL (Advanced)** | HackerRank | 🟢 Completed | [Verify Certificate](https://www.hackerrank.com/certificates/336b9c325da0) |
+| **SQL (Intermediate)** | HackerRank | 🟢 Completed | [Verify Certificate](https://www.hackerrank.com/certificates/944fcfc03836) |
+| **GitHub Foundations** | DataCamp | 🟢 Completed | [Verify Certificate](https://www.datacamp.com/completed/statement-of-accomplishment/track/fa688c16f2b2244e00836c5c358b5ee4443cdf66?utm_medium=organic_social&utm_campaign=sharewidget&utm_content=soa) |
+| **Google Advanced Data Analytics Professional Certificate** | Coursera / Google | 🟡 In Progress | *Coming Soon* |
+| **Microsoft: Power BI Data Analyst Associate (PL-300)** | Microsoft | 🗓️ Planned (Aug 2026) | *Coming Soon* |
+| **Excel Fundamentals** | DataCamp | 🟢 Completed | [Verify Certificate](https://www.datacamp.com/completed/statement-of-accomplishment/track/7268cc3d7677ec351f33fcd9b4aaff9924134df2?utm_medium=organic_social&utm_campaign=sharewidget&utm_content=soa) |
+
+---
 ## 💌 Let's Connect! 💖
 
 * 💼 **LinkedIn:** [Kartlyn Nguyen](https://www.linkedin.com/in/kartlyn-nguyen/)
