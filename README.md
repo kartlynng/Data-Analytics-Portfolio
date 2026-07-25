@@ -13,9 +13,32 @@ Hi there! 👋 Welcome to My Data Analytics World ✨ 🌸📊 This repository s
 ---
 ## 📂 Portfolio Projects 📁
 
+### 🟢 Excel Projects 📑
+| Project Name | Key Tools & Techniques | Summary | Status |
+| :--- | :--- | :--- | :--- |
+| **[E-Commerce Inventory & Reorder Predictor](./01_Excel/Project_1_Inventory_Predictor)** | Dynamic Arrays (`XLOOKUP`, `FILTER`), What-If Analysis, Conditional Formatting | Operational model predicting stockouts, dynamic reorder points, and automated inventory alerts. | 🚧 In Progress |
+| **[Automated Executive Reporting Tool](./01_Excel/Project_2_Executive_Reporting)** | Power Query, VBA / Macros, Dynamic Data Refresh | Automated pipeline that transforms raw weekly sales data into executive PDF/email reports. | ⏳ Planned |
+| **[Workforce Scheduling & Attrition Tracker](./01_Excel/Project_3_Workforce_Attrition)** | Advanced Pivot Tables, Complex Logic (`SUMIFS`), Dynamic Slicers | Operational dashboard tracking HR metrics, scheduling optimization, and employee turnover patterns. | ⏳ Planned |
 
+---
+### 🔵 SQL Projects 🗄️
+| Project Name | Key Tools & Techniques | Summary | Status |
+| :--- | :--- | :--- | :--- |
+| *Coming Soon* | CTEs, Aggregations, Window Functions | ... | ⏳ Planned |
 
+---
 
+### 🐍 Python Projects 🐍
+| Project Name | Key Tools & Techniques | Summary | Status |
+| :--- | :--- | :--- | :--- |
+| *Coming Soon* | Pandas, Seaborn, Exploratory Data Analysis | ... | ⏳ Planned |
+
+---
+
+### 📊 Business Intelligence (Power BI / Tableau) 🎨
+| Project Name | Key Tools & Techniques | Summary | Status |
+| :--- | :--- | :--- | :--- |
+| *Coming Soon* | Interactive Dashboards, Data Modeling, DAX | ... | ⏳ Planned |
 
 ---
 ## 💌 Let's Connect! 💖
