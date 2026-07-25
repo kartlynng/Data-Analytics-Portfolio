@@ -42,6 +42,11 @@ Hi there! 👋 Welcome to My Data Analytics World ✨ 🌸📊 This repository s
 
 ---
 ## 📜 Relevant Certifications & Credentials
+> ⚠️ **WARNING:** Proceed with caution! 🛑
+> 
+> Yes, I know this list is already getting long—and full disclosure, it’s only going to grow! I’m an endlessly curious lifelong learner 🧠✨ who genuinely gets excited about picking up new tools and solving data puzzles. 🧩 If you check back in a few years, expect a full 3-page scroll—because stopping at "good enough" just isn't in my codebase! 💻
+>
+> Consider this just the teaser. Stay tuned for more! 🚀
 
 | Certification | Issuing Organization | Status / Completion | Link |
 | :--- | :--- | :--- | :---: |
@@ -54,12 +59,6 @@ Hi there! 👋 Welcome to My Data Analytics World ✨ 🌸📊 This repository s
 | **Microsoft: Power BI Data Analyst Associate (PL-300)** | Microsoft | 🗓️ Planned (Aug 2026) | *Coming Soon* ⏳ |
 | **Excel Fundamentals** | DataCamp | 🟢 Completed | [Verify Certificate](https://www.datacamp.com/completed/statement-of-accomplishment/track/7268cc3d7677ec351f33fcd9b4aaff9924134df2?utm_medium=organic_social&utm_campaign=sharewidget&utm_content=soa) |
 | ... | ... | ...| *Coming Soon* ⏳|
-
-> ⚠️ **WARNING:** Proceed with caution! 🛑
-> 
-> Yes, I know this list is already getting long—and full disclosure, it’s only going to grow! I’m an endlessly curious lifelong learner 🧠✨ who genuinely gets excited about picking up new tools and solving data puzzles. 🧩 If you check back in a few years, expect a full 3-page scroll—because stopping at "good enough" just isn't in my codebase! 💻
->
-> Consider this just the teaser. Stay tuned for more! 🚀
 
 ---
 ## 💌 Let's Connect! 💖
