@@ -1,5 +1,24 @@
-# 📊 Data Analytics Portfolio
-Hi there! 👋 Welcome to My Data Analytics World ✨ 🌸📊 This repository showcases my end-to-end projects across **Excel business modeling**, **SQL data analysis**, **Python data science**, and **interactive BI/Tableau dashboards**.
+# Welcome to My Data Analytics World ✨ 🌸📊
+---
+### 👋 Hi there, I'm Kartlyn Nguyen!
+*(also known as **Phuong Trinh Nguyen** ☀️)*
+
+🎓 **University of California, Berkeley** | B.A. Statistics & Data Science
+
+🏆 **Fun Flex:** Proud owner of **3 Associate Degrees** with *Summa Cum Laude* *(Math, Economics, & Natural Sciences)* 🏅 
+
+📣 **Leadership & Voice:**
+* 💡 **CDSS Student Advisory Board Member** — Advising faculty & shaping the DS experience for 2,000+ Cal students
+* 👩‍💻 **Data Science Committee Member @ WiCDS** — Women in Computing & Data Science ***(always supporting Women in STEM!)***
+* 🎙️ **Starting Point Mentorship Panelist** — Selected as 1 of 4 students to represent UC Berkeley to 100+ transfer students
+
+🎯 **Target Role:** Data Analytics / Data Science Intern
+
+---
+
+### 💡 About Me
+
+I’m an analytics enthusiast who loves turning complex, scary-looking datasets into clean dashboards and actionable stories. Whether I'm wrestling with SQL queries, fitting predictive models, or designing dynamic Excel/Google Sheets reports, I get genuine joy out of solving data puzzles!
 
 ---
 
