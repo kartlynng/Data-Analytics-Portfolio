@@ -5,10 +5,10 @@ Hi there! 👋 Welcome to My Data Analytics World ✨ 🌸📊 This repository s
 
 ## 🛠️ Tech Stack & Favorite Tools 🎀
 
-* ** Spreadsheets & Modeling:** Advanced Excel (Dynamic Arrays, `XLOOKUP`, `INDEX/MATCH`, `FILTER`), Power Query, VBA/Macros, Financial & Operational Modeling
-* ** Database Management:** SQL (PostgreSQL, MySQL) — Data Cleaning, Multi-table Joins, CTEs, Window Functions
-* ** Data Science & Scripting:** Python (`pandas`, `numpy`, `matplotlib`, `seaborn`)
-* ** Business Intelligence:** Power BI, Tableau (DAX, Interactive Dashboards, Data Storytelling)
+* **Spreadsheets & Modeling:** Advanced Excel (Dynamic Arrays, `XLOOKUP`, `INDEX/MATCH`, `FILTER`), Power Query, VBA/Macros, Financial & Operational Modeling
+* **Database Management:** SQL (PostgreSQL, MySQL) — Data Cleaning, Multi-table Joins, CTEs, Window Functions
+* **Data Science & Scripting:** Python (`pandas`, `numpy`, `matplotlib`, `seaborn`)
+* **Business Intelligence:** Power BI, Tableau (DAX, Interactive Dashboards, Data Storytelling)
 
 ---
 ## 📂 Portfolio Projects 📁
