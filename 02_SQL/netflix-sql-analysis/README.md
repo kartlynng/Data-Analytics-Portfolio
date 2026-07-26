@@ -6,7 +6,7 @@
 
 
 <p align="center">
-  <img src="images/logo.png" width="700">
+  <img src="docs/images/logo.png" width="700">
 </p>
 
 
@@ -44,7 +44,7 @@ The dataset contains metadata for movies and TV shows added to Netflix up throug
 ```
 
 ---
-### 📐 Database Schema & DDL (`00_schemas.sql`)
+## 📐 Database Schema & DDL (`00_schemas.sql`)
 
 > **Architectural Note (BigQuery vs. PostgreSQL):**  
 > While Google BigQuery offers schema auto-detection during CSV uploads, `00_schemas.sql` intentionally explicitly defines the database DDL. 
@@ -180,14 +180,14 @@ ORDER BY country, genre_rank_in_country;
 1. While Movies historically dominated volume, TV Shows drive long-term platform engagement and subscriber retention.
 * **Recommendation:** Expand investment in flagship serialized content (>3 seasons) while using standalone feature films as low-barrier acquisition funnels.
 
-![Proof](./outputs/query1_catalog_mix.png)
+![Proof](docs/images/query1_catalog_mix.png)
 
 2. Production hubs demonstrate clear genre dominance—the **United States** leads in Dramas, **India** specializes heavily in International Movies, and the **United Kingdom** leads in British TV Shows. Meanwhile, Drama is the only genre consistently ranked in the top three across all three markets, highlighting its broad cross-market appeal.
 * **Recommendation:** Tailor regional marketing campaigns and local production investments to mirror regional genre strengths rather than applying a one-size-fits-all global catalog strategy.
 
-![Proof](./outputs/query2_regional_genres.png)
+![Proof](docs/images/query2_regional_genres.png)
 
 3. Annual content additions peaked rapidly between 2018–2020 before stabilizing, reflecting a strategic pivot from sheer volume acquisition to curated, high-quality original IPs.
 * **Recommendation:** Focus procurement on retention-driving genres and high-performing recurring talent (e.g., top US feature actors) rather than raw title count growth.
 
-![Proof](./outputs/query3_yoy_growth.png)
+![Proof](docs/images/query3_yoy_growth.png)
