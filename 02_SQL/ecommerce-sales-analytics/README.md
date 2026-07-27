@@ -4,11 +4,6 @@
 [![SQL](https://img.shields.io/badge/SQL-Data_Analytics-00758F?style=flat&logo=sqlite&logoColor=white)](#)
 [![Version Control](https://img.shields.io/badge/GitHub-Repository-181717?style=flat&logo=github&logoColor=white)](#)
 
-
-<p align="center">
-  <img src="docs/images/uci_ml_repo_logo.png" alt="UCI ML Repo" width="100" />
-</p>
-
 <p align="center">
   <img src="docs/images/ecommerce.png" alt="Online Retail Banner" width="100%" />
 </p>
