@@ -47,10 +47,10 @@ I’m an analytics enthusiast who loves turning complex, scary-looking datasets 
 
 ---
 
-### 🐍 Python Projects 🐍
+### 🐍 Python Project 🐍
 | Project Name | Key Tools & Techniques | Summary | Status |
 | :--- | :--- | :--- | :--- |
-| *Coming Soon* | Pandas, Seaborn, Exploratory Data Analysis | ... | ⏳ Planned |
+| *Coming Soon* | NumPy, Pandas, Seaborn, Exploratory Data Analysis (EDA) | ... | ⏳ Planned |
 
 ---
 
