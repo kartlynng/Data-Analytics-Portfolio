@@ -5,6 +5,16 @@
 [![Version Control](https://img.shields.io/badge/GitHub-Repository-181717?style=flat&logo=github&logoColor=white)](#)
 
 
+<p align="center">
+  <img src="docs/images/uci_ml_repo_logo.png" alt="UCI ML Repo" width="100" />
+</p>
+
+<p align="center">
+  <img src="docs/images/ecommerce.png" alt="Online Retail Banner" width="100%" />
+</p>
+
+---
+
 ## 📌 Project Overview
 This project analyzes over 500k customer transactions from an international online retail store. The goal is to clean transactional data and extract key business insights regarding **customer retention, churn risk, geographic revenue, and product velocity**.
 
