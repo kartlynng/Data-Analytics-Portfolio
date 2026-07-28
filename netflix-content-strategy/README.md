@@ -27,6 +27,8 @@ The dataset contains metadata for movies and TV shows added to Netflix up throug
 * **Total Records:** 8,807
 * **Columns:** 12
 * **Key Attributes:** `show_id`, `type`, `title`, `director`, `cast`, `country`, `date_added`, `release_year`, `rating`, `duration`, `listed_in` (genres), `description`.
+
+> **⚠️ Limitations:** This dataset reflects Netflix's catalog composition **only up through 2021**. Findings on content strategy, genre concentration, and growth trends describe historical platform behavior and may not generalize to Netflix's current acquisition strategy or catalog.
 ---
 ## 📁 Repository Structure
 
@@ -34,11 +36,11 @@ The dataset contains metadata for movies and TV shows added to Netflix up throug
 ├── data/
 │   └── netflix_titles.csv         # Raw CSV dataset from Kaggle
 ├── sql/
-│   ├── 00_schemas.sql       # DDL
+│   ├── 00_schemas.sql             # DDL
 │   ├── 01_data_cleaning.sql       # Data transformations, null handling & type casting
 │   ├── 02_eda_queries.sql         # 15 Core Business Problems
 │   └── 03_business_insights.sql   # YoY growth, licensing lag, & regional concentration
-├── outputs/                       # Exported query results (.csv files) and summary statistics
+├── outputs/                       # Exported query results (.csv files)
 ├── docs/                          # Snapshots of queries' results
 └── README.md                      # Project documentation
 ```
@@ -191,3 +193,9 @@ ORDER BY country, genre_rank_in_country;
 * **Recommendation:** Focus procurement on retention-driving genres and high-performing recurring talent (e.g., top US feature actors) rather than raw title count growth.
 
 ![Proof](docs/images/query3_yoy_growth.png)
+
+---
+## 🔍 Next Steps (What I Would Do If I Had More Time)
+- Extend the dataset beyond 2021 to validate whether the 2018–2020 acquisition pivot has persisted.
+- Cross-reference genre concentration findings with (external) viewership/engagement data, since this dataset only captures catalog composition, not consumption.
+- Build an interactive dashboard (Looker Studio / Tableau / PowerBI) on top of `outputs/` to make these insights explorable for non-technical stakeholders.
