@@ -1,7 +1,8 @@
 # 🎵 Spotify User Behavior & Churn Analytics Pipeline
 
+![Google Sheets](https://img.shields.io/badge/Google_Sheets-Data_Ingest-34A853?style=for-the-badge&logo=googlesheets&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/SQL-PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white)
 ![Python](https://img.shields.io/badge/Python-3.9+-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![SQL](https://img.shields.io/badge/SQL-PostgreSQL%2FSQLite-4169E1?style=for-the-badge&logo=postgresql&logoColor=white)
 ![Power BI](https://img.shields.io/badge/Power_BI-Dashboard-F2C811?style=for-the-badge&logo=powerbi&logoColor=black)
 ![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-ML-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)
 
@@ -35,3 +36,12 @@ Understanding user retention, listening habits, and subscription conversion dyna
   │ (Raw Ingest) │     │ (EDA & Model)│     │  (ML & ETL)  │     │ (Executive)  │
   └──────────────┘     └──────────────┘     └──────────────┘     └──────────────┘
 ```
+### 💡 Why Google Sheets over Excel for Raw Ingestion?
+
+I use a MacBook, and I once received this message from a classmate during a peer-reviewed assignment:
+
+> *"Hey, I don't want my laptop to get hacked, so I don't download PDF files you posted. Next time, could you upload the script directly to the answer box on bCourses instead?"*
+
+Since then, I've started thinking more from a reviewer's perspective.
+
+That's why I chose **Google Sheets** for the raw data ingestion step. Anyone can quickly open and inspect the raw dataset in their browser without downloading a file or worrying about software compatibility. It makes the project easier to review, more accessible, and a little more convenient for everyone.
