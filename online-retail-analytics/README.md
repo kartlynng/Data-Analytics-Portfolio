@@ -107,6 +107,13 @@ FROM `sql-projects-503512.uci_online_retail.online_retail_staging`;
 ![Data Quality Check](docs/images/data_quality_check.png)
 
 ---
+## 📊 Interactive Data Visualization (Tableau)
+
+![Global E-Commerce Revenue & Sales Dashboard](./dashboards/preview.png)
+
+👉 **[View Interactive Tableau Dashboard Here](https://public.tableau.com/app/profile/trinh.nguyen3873/viz/UCIOnlineRetail_17853364241720/Dashboard1?publish=yes)**
+
+---
 ## 📈 Key Business Findings & Recommendations
 
 1. Monthly sales experience explosive growth leading into Q4, jumping +47.61% MoM in September 2011 ($950.7K) and reaching an all-time peak of $1.155M in November 2011.
