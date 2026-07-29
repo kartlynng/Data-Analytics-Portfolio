@@ -2,6 +2,7 @@
 
 [![Database](https://img.shields.io/badge/Google_BigQuery-3B82F6?style=flat&logo=googlecloud&logoColor=white)](https://cloud.google.com/bigquery)
 [![SQL](https://img.shields.io/badge/SQL-Data_Analytics-00758F?style=flat&logo=sqlite&logoColor=white)](#)
+[![Tableau](https://img.shields.io/badge/Tableau-Dashboard-E97627?style=flat&logo=tableau&logoColor=white)](https://www.tableau.com/)
 [![Version Control](https://img.shields.io/badge/GitHub-Repository-181717?style=flat&logo=github&logoColor=white)](#)
 
 <p align="center">
