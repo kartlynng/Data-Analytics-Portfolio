@@ -142,3 +142,13 @@ FROM `sql-projects-503512.uci_online_retail.online_retail_staging`;
 ![One-Off Revenue Outliers](docs/images/sku_orders.png)
 
 * **Actionable Strategy:** Separate B2B bulk purchase anomalies from core reorder forecasting models. Standard inventory reordering should be optimized around steady-state, high-frequency SKUs to prevent overcapitalization on low-frequency outlier items.
+
+---
+## 🔍 Next Steps (What I Would Do If I Had More Time)
+
+If I had more time, I would expand this project by:
+
+* **Predictive Modeling with Python (XGBoost or Logistic Regression):** Train a ML model to forecast customer churn and predict individual Customer Lifetime Value (CLV).
+* **Interactive Dashboards:** Connect BigQuery to Looker Studio/PowerBI/Tableau for real-time visualization of KPIs and RFM segments.
+* **Pipeline Automation:** Refactor SQL into **dbt** for automated data testing, quality documentation, and scheduled daily updates.
+* **Experimentation:** Design and run A/B tests on win-back marketing campaigns to measure incremental lift and impact.
