@@ -44,4 +44,3 @@ I use a MacBook, and I once received this message from a classmate during a peer
 
 Since then, I've started thinking more from a reviewer's perspective.
 
-That's why I chose **Google Sheets** for the raw data ingestion step. Anyone can quickly open and inspect the raw dataset in their browser without downloading a file or worrying about software compatibility. It makes the project easier to review, more accessible, and a little more convenient for everyone.
