@@ -109,7 +109,7 @@ FROM `sql-projects-503512.uci_online_retail.online_retail_staging`;
 ---
 ## 📊 Interactive Data Visualization (Tableau)
 
-![Global E-Commerce Revenue & Sales Dashboard](./dashboards/preview.png)
+![Global E-Commerce Revenue & Sales Dashboard](docs/images/preview.png)
 
 👉 **[View Interactive Tableau Dashboard Here](https://public.tableau.com/app/profile/trinh.nguyen3873/viz/UCIOnlineRetail_17853364241720/Dashboard1?publish=yes)**
 
