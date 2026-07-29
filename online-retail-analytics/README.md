@@ -108,37 +108,37 @@ FROM `sql-projects-503512.uci_online_retail.online_retail_staging`;
 ---
 ## 📈 Key Business Findings & Recommendations
 
-### 1. Monthly sales experience explosive growth leading into Q4, jumping +47.61% MoM in September 2011 ($950.7K) and reaching an all-time peak of $1.155M in November 2011.
+1. Monthly sales experience explosive growth leading into Q4, jumping +47.61% MoM in September 2011 ($950.7K) and reaching an all-time peak of $1.155M in November 2011.
 ![MoM Growth Rate](docs/images/mom_growth_rate.png)
 * **Actionable Strategy:** Highlights strong holiday gift-buying seasonality. Supply chain, warehouse staffing, and inventory stocking must be finalized by **late August** to mitigate supply chain bottlenecks and prevent stockouts during the September–November peak demand window.
 
 ---
-### 2. 34.42% of customers (1,493 buyers) make only a single purchase and never return. Conversely, 45.48% (1,973 buyers) make 2–5 repeat purchases, while only 7.77% (337 buyers) become 10+ order power buyers.
+2. 34.42% of customers (1,493 buyers) make only a single purchase and never return. Conversely, 45.48% (1,973 buyers) make 2–5 repeat purchases, while only 7.77% (337 buyers) become 10+ order power buyers.
 ![Customer Loyalty Tier](docs/images/customer_loyalty_tier.png)
 
 * **Actionable Strategy:** The primary growth bottleneck is converting single-purchase buyers into regular buyers. Implement an automated **30-day post-purchase lifecycle email journey** offering personalized cross-sell recommendations and a time-bound discount on second orders to lift customer retention.
 
 ---
-### 3. RFM Segmentation revealed that **15.38% of customers (667 accounts)** belong to the "At Risk (High-Value Lost)" cohort. These accounts were historically high-volume buyers (avg. **3.4 orders** and **$1,290.81 LTV**), but have not made a purchase in over **150 days**.
+3. RFM Segmentation revealed that **15.38% of customers (667 accounts)** belong to the "At Risk (High-Value Lost)" cohort. These accounts were historically high-volume buyers (avg. **3.4 orders** and **$1,290.81 LTV**), but have not made a purchase in over **150 days**.
 ![RFM Segmentation](docs/images/rfm_segmentation.png)
 
 * **Actionable Strategy:** Deploy automated win-back re-engagement campaigns targeting accounts with >90 days of inactivity. Because acquiring a new customer costs 5x more than retaining an existing one, reclaiming even 10% of this segment recovers ~$86K in high-margin revenue.
 
 ---
-### 4. While domestic UK buyers account for **81.97% of total revenue ($7.28M)**, international customers yield dramatically higher spend per user. The **Netherlands leads with $31,716.26 revenue per customer** (285.4K across 9 buyers), followed by **Australia ($15,383.76 per customer)**.
+4. While domestic UK buyers account for **81.97% of total revenue ($7.28M)**, international customers yield dramatically higher spend per user. The **Netherlands leads with $31,716.26 revenue per customer** (285.4K across 9 buyers), followed by **Australia ($15,383.76 per customer)**.
 ![UK vs International Markets](docs/images/uk_vs_international.png)
 ![Revenue Per Customer](docs/images/revenue_per_customer.png)
 
 * **Actionable Strategy:** Transition overseas strategy from general B2C marketing to dedicated B2B wholesale channels. Establish localized wholesale pricing, bulk shipping incentives, and dedicated account management in top international markets (Netherlands, Australia, Germany, and France).
 
 ---
-### 5. Co-purchase analysis revealed highly specific product pairs frequently bought together in the same order, led by matching color variations like **"JUMBO BAG PINK POLKADOT" & "JUMBO BAG RED RETROSPOT" (575 co-purchases)** and **Teacup sets (557 co-purchases)**.
+5. Co-purchase analysis revealed highly specific product pairs frequently bought together in the same order, led by matching color variations like **"JUMBO BAG PINK POLKADOT" & "JUMBO BAG RED RETROSPOT" (575 co-purchases)** and **Teacup sets (557 co-purchases)**.
 ![Cross-Selling Products](docs/images/cross_selling_products.png)
 
 * **Actionable Strategy:** Provides direct data-backed rules for e-commerce cross-sell recommendations ("Frequently Bought Together") and multi-pack item bundling to increase Average Order Value (AOV).
 
 ---
-### 6. Top SKU analysis revealed a stark operational difference between one-off bulk transactions and steady retail demand. The top product by sales, **"PAPER CRAFT, LITTLE BIRDIE" ($168.5K)**, was bought in a single bulk order (80,995 units). Conversely, evergreen core items like **"REGENCY CAKESTAND 3 TIER" ($142.3K)** drove sales consistently across **1,703 separate orders**.
+6. Top SKU analysis revealed a stark operational difference between one-off bulk transactions and steady retail demand. The top product by sales, **"PAPER CRAFT, LITTLE BIRDIE" ($168.5K)**, was bought in a single bulk order (80,995 units). Conversely, evergreen core items like **"REGENCY CAKESTAND 3 TIER" ($142.3K)** drove sales consistently across **1,703 separate orders**.
 ![One-Off Revenue Outliers](docs/images/sku_orders.png)
 
 * **Actionable Strategy:** Separate B2B bulk purchase anomalies from core reorder forecasting models. Standard inventory reordering should be optimized around steady-state, high-frequency SKUs to prevent overcapitalization on low-frequency outlier items.
