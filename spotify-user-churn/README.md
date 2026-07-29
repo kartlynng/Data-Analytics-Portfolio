@@ -9,6 +9,10 @@
   <img src="docs/images/spotify_logo.png" alt="Spotify" width="100%" />
 </p>
 
+---
+## 📌 Executive Summary
 An end-to-end data analytics and machine learning project analyzing **50,000 Spotify user profiles** to discover engagement patterns, evaluate ad monetization conversion, predict account inactivity/churn, and deliver executive insights via an interactive dashboard.
 
+---
+## 💻 Tech Stack
 *Coming Soon* ⏳
