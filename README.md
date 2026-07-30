@@ -46,6 +46,27 @@ I'm currently exploring how Generative AI can enhance the analytics workflow—f
   <tbody>
     <tr>
       <td valign="top">
+        <a href="https://github.com/kartlynng/Data-Analytics-Portfolio/tree/main/h1b-employer-sponsorship-analysis"><b>💼 H-1B Sponsorship & Approval Prediction</b></a><br>
+        <sub><a href="https://github.com/kartlynng/Data-Analytics-Portfolio/blob/main/h1b-employer-sponsorship-analysis/kartlyn-h1b-analysis.ipynb">Notebook ↗</a></sub>
+      </td>
+      <td valign="top">
+        Python<br>
+        pandas<br>
+        scikit-learn<br>
+        Plotly
+      </td>
+      <td valign="top">
+        • USCIS FY2026 dataset<br>
+        • 24,362 employer records<br>
+        • Aggregation & Modeling
+      </td>
+      <td valign="top">
+        • Professional, Scientific & Technical Services dominates demand (~37,200 approvals), >3.5x higher than Manufacturing.<br>
+        • Employer, industry, and state alone are weak predictors of approval outcome (<b>AUC ≈ 0.53</b>), proving case-specific factors (wage levels, job duties) drive decisions over aggregate employer metrics.
+      </td>
+    </tr>
+    <tr>
+      <td valign="top">
         <a href="https://github.com/kartlynng/Data-Analytics-Portfolio/tree/main/pediatric-tbi-risk-analytics"><b>🏥 Pediatric TBI Risk Analytics</b></a><br>
         <sub><a href="https://github.com/kartlynng/Data-Analytics-Portfolio/tree/main/pediatric-tbi-risk-analytics/report">Report PDF ↗</a></sub>
       </td>
