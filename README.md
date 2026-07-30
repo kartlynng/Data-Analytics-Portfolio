@@ -109,6 +109,26 @@ I'm currently exploring how Generative AI can enhance the analytics workflow—f
         • Design document published; implementation underway.
       </td>
     </tr>
+    <tr>
+      <td valign="top">
+        <a href="https://github.com/kartlynng/Data-Analytics-Portfolio/tree/main/silicon-valley-hospitality-analytics"><b>🏠 Silicon Valley Hospitality Analytics</b></a>
+      </td>
+      <td valign="top">
+        Excel<br>
+        Power Query<br>
+        Power Pivot
+      </td>
+      <td valign="top">
+        • 3 relational datasets<br>
+        • Multi-million row time-series<br>
+        • Silicon Valley STR market
+      </td>
+      <td valign="top">
+        • Built a relational data model linking listings, daily availability, and reviews via Power Query ETL and Power Pivot.<br>
+        • Evaluated key hospitality yield metrics (<b>ADR, RevPAR, and Occupancy Rate %</b>) across sub-markets like Palo Alto and San Jose.<br>
+        • Formulated an interactive single-page executive dashboard with global Slicers to optimize short-term rental pricing strategy.
+      </td>
+    </tr>
   </tbody>
 </table>
 
