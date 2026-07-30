@@ -83,8 +83,15 @@ Synthesized EDA artifacts into a streamlined report for Dr. Bayes, featuring **3
 
 ![Proof](results/plots/GCS_score_by_Age_ciTBI.png)
 
-* **Prolonged Loss of Consciousness (LOC) Drives Risk:** The probability of ciTBI increases significantly with LOC duration, peaking in patients with **LOC > 5 minutes** (accounting for 90 positive ciTBI cases).
-> Patients experiencing **LOC > 5 minutes** exhibited the highest volume of positive ciTBI cases (90 confirmed cases), serving as a crucial red flag for emergency triaging.
+* **LOC Duration Shows a Steep Dose-Response with ciTBI Risk:** Against a cohort base rate of 1.80%, ciTBI risk rises monotonically with loss-of-consciousness duration and jumps sharply beyond five minutes:
+  | LOC duration | Patients | ciTBI | Rate |
+  | :--- | ---: | ---: | ---: |
+  | < 5 sec | 660 | 8 | 1.21% |
+  | 5 sec – 1 min | 1,308 | 25 | 1.91% |
+  | 1 – 5 min | 754 | 30 | 3.98% |
+  | **> 5 min** | **259** | **90** | **34.88%** |
+
+LOC exceeding five minutes carries a **19-fold elevation** over baseline.
 
 ![Proof](results/plots/LOC_by_ciTBI_bar.png)
 
