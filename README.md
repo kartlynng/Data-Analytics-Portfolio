@@ -52,6 +52,10 @@ I'm currently exploring how Generative AI can enhance the analytics workflow—f
       <td valign="top">
         Python<br>
         pandas<br>
+        Feature Engineering<br>
+        Logistic Regression<br>
+        Random Forest<br>
+        ROC-AUC Evaluation<br>
         scikit-learn<br>
         Plotly
       </td>
@@ -70,7 +74,13 @@ I'm currently exploring how Generative AI can enhance the analytics workflow—f
         <a href="https://github.com/kartlynng/Data-Analytics-Portfolio/tree/main/pediatric-tbi-risk-analytics"><b>🏥 Pediatric TBI Risk Analytics</b></a><br>
         <sub><a href="https://github.com/kartlynng/Data-Analytics-Portfolio/tree/main/pediatric-tbi-risk-analytics/report">Report PDF ↗</a></sub>
       </td>
-      <td valign="top">R<br>Quarto<br>Positron<br>ggplot2</td>
+      <td valign="top">
+        R<br>
+        Quarto<br>
+        Statistical Analysis<br>
+        Positron<br>
+        ggplot2
+      </td>
       <td valign="top">
         • PECARN ER Dataset<br>
         • Pediatric head trauma<br>
@@ -86,7 +96,13 @@ I'm currently exploring how Generative AI can enhance the analytics workflow—f
         <a href="https://github.com/kartlynng/Data-Analytics-Portfolio/tree/main/online-retail-analytics"><b>🛒 E-Commerce Customer Analytics</b></a><br>
         <sub><a href="https://public.tableau.com/app/profile/trinh.nguyen3873/viz/UCIOnlineRetail_17853364241720/Dashboard1?publish=yes">Live Dashboard ↗</a></sub>
       </td>
-      <td valign="top">BigQuery SQL<br>Tableau</td>
+      <td valign="top">
+        BigQuery SQL<br>
+        Window Functions<br>
+        CTEs<br>
+        RFM Segmentation<br>
+        Tableau
+      </td>
       <td valign="top">
         • 541,909 transactions<br>
         • 4,372 customers<br>
@@ -102,7 +118,12 @@ I'm currently exploring how Generative AI can enhance the analytics workflow—f
       <td valign="top">
         <a href="https://github.com/kartlynng/Data-Analytics-Portfolio/tree/main/netflix-content-strategy"><b>🎬 Netflix Content Strategy</b></a>
       </td>
-      <td valign="top">BigQuery SQL</td>
+      <td valign="top">
+        BigQuery SQL<br>
+        Exploratory Analytics<br>
+        Window Functions<br>
+        CTEs
+      </td>
       <td valign="top">
         • 8,807 titles<br>
         • 12 attributes<br>
@@ -121,7 +142,8 @@ I'm currently exploring how Generative AI can enhance the analytics workflow—f
       <td valign="top">
         Google Sheets API<br>
         PostgreSQL<br>
-        Python<br>
+        Python ETL<br>
+        Data Validation<br>
         Power BI
       </td>
       <td valign="top">• 50,000 subscriber profiles</td>
@@ -137,7 +159,9 @@ I'm currently exploring how Generative AI can enhance the analytics workflow—f
       </td>
       <td valign="top">
         Excel<br>
-        Power Query<br>
+        Power Query ETL<br>
+        Data Modeling<br>
+        DAX<br>
         Power Pivot
       </td>
       <td valign="top">
@@ -153,8 +177,6 @@ I'm currently exploring how Generative AI can enhance the analytics workflow—f
     </tr>
   </tbody>
 </table>
-
-*More Coming Soon* ⏳
 
 ---
 ## 📜 Relevant Certifications & Credentials
