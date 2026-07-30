@@ -1,0 +1,188 @@
+---
+title: "Reflections: Errors and Lessons"
+format: html
+---
+
+-   **Reflection:** Insights on how I can improve my approach in future analyses.
+-   **Error:** Mistakes encountered during the project and the lessons learned from correcting them.
+-   **Lesson:** Key takeaways gained throughout the project and analysis process.
+
+```{r}
+#| include: false
+library(tidyverse)
+```
+
+## 1. REFLECTION 1: DATA CLEANING STEP
+
+-   I think at the **Data Cleaning** step, I can do:
+
+*citbi\[citbi == 91\] \<- NA*
+
+*citbi\[citbi == 92\] \<- NA*
+
+or *citbi\[citbi %in% c(91, 92)\] \<- NA*
+
+or citbi \|\> mutate( across(everything(), \~ifelse(.x %in% c(91, 92), NA, .x)) )
+
+### Code used:
+
+-   Subsetting with logical vectors.
+-   mutate(across(.cols, .fns)): .cols = which columns, .fns = what functions to apply
+
+#.x = current column
+
+### Why this approach?
+
+-   **Efficiency:** It's faster and more concise than handling each column individually.
+
+-   **Consistency:** It produces the same result as column-by-column replacement I did.
+
+-   **Scope:** The method is applied to the entire data frame, ensuring all coded missing values (91, 92) are handled uniformly without relying on manual column identification.
+
+### What I will do next time:
+
+-   To save time and avoid unnecessary long code, I will apply this transformation at the data-cleaning stage, especially when working with large data frames that contain many columns with coded values such as 91 and 92.
+
+### When NOT to apply this globally:
+
+-   If 91 or 92 are valid values in some variables (e.g., IDs, real measurements).
+
+-   When these values carry real analytical meaning, rather than simply serving as sentinel codes for missingness across the dataset.
+
+## 2. LESSON 1: IN CREATING A MISSING DATA SUMMARY
+
+### What I learned:
+
+1.  across() must be used inside data-masking verbs like summarize(), mutate(), filter(), etc.
+
+2.  I initially wasn’t sure how to pass all columns to pivot_longer(). Using everything() in the cols argument applies the transformation to the entire dataset.
+
+3.  
+
+-   ".value" in pivot_longer(): it tells pivot_longer() to use part of the column name as column headers.
+
+-   names_sep = "--": doing the splitting.
+
+## 3. LESSON 2: IN CREATING A BAR CHART
+
+### What I learned:
+
+-   geom_bar(): automatically counts observations, so no y needed!
+-   However, if we wanted to use geom_bar with the column count (available) \~ no re-counts: add **stat = "identity"** as the 2nd arg in geom_bar().
+
+### Another approach for Question 7, using the data frame loclen_citbi instead of citbi:
+
+```{r}
+#| label: Another Approach for geom_bar()
+#| eval: false
+LOC_by_ciTBI_bar_2 <- loclen_citbi |>
+    drop_na(loss_of_consciousness_len, citbi_outcome) |>
+    ggplot(aes(x = loss_of_consciousness_len, y =count, fill = citbi_outcome)) + 
+    geom_bar(position = "dodge", stat = "identity", color = "black") +
+    labs(
+        title = "Length of Loss of Consciousness by ciTBI outcome",
+        subtitle = "PECARN Emergency Departments",
+        x = "Length of Loss of Consciousness (LOC)",
+        y = "Count",
+        fill = "ciTBI Outcome"
+    ) +
+    theme_minimal()
+LOC_by_ciTBI_bar_2
+```
+
+## 4. LESSON 3: IN CREATING A SCATTER PLOT IN QUESTION 9
+
+### What happened:
+
+```{r}
+#| label: My code for a scatter plot
+#| eval: false
+citbi |>
+    ggplot(aes(x = age_in_year, y = GCSTotal, fill = age_in_year)) +
+    geom_point() +
+    theme_bw()
+```
+
+-   I initially created a scatter plot to visualize the relationship between age (in years) and total GCS score, since both variables are numeric. However, the resulting plot was not very informative.
+
+![](images/uninformative_plot.png)
+
+### Why the plot was uninformative?
+
+-   **Discrete variables:** Although numeric, GCSTotal only takes integer values between 3 and 15, and age_in_year is also integer-valued. This caused points to fall on a rigid grid.
+
+-   **Overplotting:** Many observations overlapped, making it difficult to see any meaningful pattern or trend.
+
+-   **Lack of analytical insight:** The plot did not help answer a meaningful question or reveal a relationship between variables.
+
+### What I learned:
+
+-   Not all numeric variables are suitable for a standard scatter plot, especially when they are discrete.
+-   **Effective visualizations** should *minimize overplotting, encode new information with aesthetics, and clearly support an analytical question.*
+
+### How I Fixed It:
+
+-   Based from what I learned, I modified the visualization strategy by:
+
+a.  using jittering to reduce overplotting,
+b.  encoding a clinically meaningful variable (ciTBI outcome) with color,
+c.  and adjusting transparency to better show point density.
+
+### Key Takeaway:
+
+-   Choosing the correct visualization depends not just on data type, but on how the data behave.
+
+## 5. ERROR 1: BUILDING A FUNCTION (at the end)
+
+### What happened:
+
+```{r}
+#| label: My code when building a function gender_related
+#| eval: false
+gender_related <- function(categorical_variable){
+    citbi |>
+    drop_na(gender, categorical_variable) |>
+    group_by(gender, categorical_variable) |>
+    summarise(
+        count = n(),
+        .groups = "drop"
+    ) |>
+    group_by(gender) |>
+    mutate(
+        proportion = count / sum(count)
+    )
+}
+
+# Check
+gender_related(neurological_deficit)
+```
+
+-   Although the logic was correct, the code failed when I tried to pass different column names into the function.
+
+-   I encountered an Error saying that **object 'neurological_deficit' not found**.
+
+### Why?
+
+-   This error happened because **dplyr** uses tidy evaluation (non-standard evaluation).
+
+-   Inside a function, column names passed as arguments are treated as regular objects, not as column references, *unless explicitly specified.*
+
+-   In my original code, the argument *categorical_variable* was interpreted literally rather than as a column name from the dataset.
+
+### How I fixed:
+
+-   I added **curly-curly syntax {{}}** around *categorical_variable*, which tells **dplyr** that "take the column name passed into the function and evaluate it inside dplyr."
+
+## 6. LESSON 4: REPORTING KEY FINDINGS
+
+### What happened:
+
+-   I wanted to use the data products (plots and tables) created in **preparation.qmd**, but the final report needed to be written in a separate file, **report.qmd**.
+
+-   Initially, I did not know how to transfer these plots without copying and pasting all the analysis code, which would make the report cluttered and repetitive.
+
+### What I did:
+
+-   I saved the finalized data products as R objects using **saveRDS()** at the end of *preparation.qmd*.
+
+-   I then loaded these saved objects in *report.qmd* using **readRDS()** and displayed them directly, without rerunning or duplicating the analysis code.

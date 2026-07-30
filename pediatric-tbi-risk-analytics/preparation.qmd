@@ -1,0 +1,478 @@
+---
+title: Data Preparation
+author: Kartlyn Nguyen
+format: typst
+---
+
+```{r}
+# Load necessary libraries:
+library(tidyverse)
+```
+
+```{r}
+# Load Data:
+citbi <- read_csv("data/citbi.csv")
+citbi
+```
+
+```{r}
+# Quickly explore data:
+class(citbi) # "spec_tbl_df" "tbl_df"  "tbl"  "data.frame" 
+typeof(citbi) # "list"
+
+dim(citbi) # 30379 rows ~ 30379 patients and 26 columns
+```
+
+
+## Part I: Data Cleaning
+**1. Address Missing Data**
+- Missing values in this dataset are not only represented by NA, but also by specific coded values:
+    a. 91: Pre-verbal / Non-verbal patients
+    b. 92: Not Applicable (NA)
+
+```{r}
+# Investigate NA values:
+
+# Take a look at columns with '91' values:
+na_91 <- citbi |>
+    select(Amnesia_verb, HA_verb)
+
+# Then, take a closer look at Amnesia_verb column:
+na_91|>
+    group_by(Amnesia_verb) |>
+    summarize(count = n()) #'91' has 10352 values and 'NA' has 1581 values
+
+# Next, take a closer look at HA_verb column:
+na_91 |>
+    group_by(HA_verb) |>
+    summarize(count = n()) #'91' has 9802 values and 'NA' has 450 values
+
+# Finally, I convert all '91' values to NA values with ifelse:
+citbi <- citbi |>
+    mutate(
+        Amnesia_verb = ifelse(Amnesia_verb == 91, NA, Amnesia_verb),
+        HA_verb = ifelse(HA_verb, NA, HA_verb)
+    )
+# If the value is '91', convert it to NA; otherwise, keep the original value in the original column.
+```
+
+*Observation:* Now, both Amnesia_verb and HA_verb contain proper missing values (NA) instead of the placeholder code 91.
+
+```{r}
+# Same idea with columns that have '92' values: converted to NA.
+
+na_92 <- citbi |>
+    select(LocLen, SeizLen)
+
+na_92 |>
+    group_by(LocLen) |>
+    summarize(count = n()) # 25586 '92' values & 1812 'NA' values
+
+na_92 |>
+    group_by(SeizLen) |>
+    summarize(count = n()) # 29972 '92' values & 74 'NA' values
+
+# Convert 92 values to NA values:
+citbi <- citbi |>
+    mutate(
+        LocLen = ifelse(LocLen == 92, NA, LocLen),
+        SeizLen = ifelse(SeizLen == 92, NA, SeizLen)
+    )
+```
+
+```{r}
+# Validation Check: to make sure there are no 91, 92 values in citbi
+sum(citbi %in% c(91, 92), na.rm = TRUE) #Expected result: 0
+
+# Result: 0. OKAY!
+```
+
+*Observation:* The data frame **citbi** no longer contains the coded values 91 or 92; these have been replaced with NA values to ensure proper handling of missing data.
+
+**2. Change Variable Names**
+
+```{r}
+# Rename variables for better clarity and interpretability
+
+# View current name:
+citbi_column_names <- colnames(citbi)
+citbi_column_names
+
+# Better name, I think: 
+# patient_number = PatNum, amnesia = Amnesia_verb , loss_of_consciousness_len = LocLen, seizure = Seiz, seizure_len = SeizLen, act_normal = ActNorm, headache = HA_verb, altered_mental_status = AMS, skull_fracture = SFxPalp, fontanelle_bulging = FontBulg, hematoma = Hema, clavicle_trauma = Clav, neurological_deficit = NeuroD, other_significant_injuries = OSI, citbi_outcome = PosIntFinal
+
+citbi <- citbi |>
+    rename( #dplyr function
+        patient_number = PatNum, 
+        amnesia = Amnesia_verb , loss_of_consciousness_len = LocLen, 
+        seizure = Seiz, 
+        seizure_len = SeizLen, 
+        act_normal = ActNorm, 
+        headache = HA_verb,
+        vomit = Vomit,
+        dizzy = Dizzy,
+        altered_mental_status = AMS, 
+        skull_fracture = SFxPalp, 
+        fontanelle_bulging = FontBulg, 
+        hematoma = Hema, 
+        clavicle_trauma = Clav, 
+        neurological_deficit = NeuroD, other_significant_injuries = OSI,
+        ct_form = CTForm1,
+        age_in_month = AgeInMonth,
+        gender = Gender,
+        ct_done = CTDone,
+        death_tbi = DeathTBI,
+        citbi_outcome = PosIntFinal
+    )
+# All other variable names are kept the same, including 4 columns: GCSEye, GCSVerbal, GCSMotor, and GCSTotal.
+```
+
+```{r}
+# See new names:
+colnames(citbi)
+```
+
+**3. Specify Variable Types**
+```{r}
+# Create a data frame that includes the data type of each column & na_count:
+
+# to help me decide what to convert!
+data.frame(
+  type = sapply(citbi, class),
+  na_count = sapply(citbi, function(x) sum(is.na(x)))
+)
+
+# 4 columns with na_count = 0: 'patient_number', 'GCSTotal', 'age_in_month', and 'ct_done' => Safe & clean: no conversion needed!
+```
+
+- All columns are now "numeric".
+
+```{r}
+# Convert yes/no columns to logical vectors with TRUE/FALSE answers
+citbi <- citbi |>
+    mutate(
+        amnesia = as.logical(amnesia),
+        seizure = as.logical(seizure),
+        act_normal = as.logical(act_normal),
+        headache = as.logical(headache),
+        vomit = as.logical(vomit),
+        dizzy = as.logical(dizzy),
+        altered_mental_status = as.logical(altered_mental_status),
+        skull_fracture = as.factor(skull_fracture), # treat 2 values (= unclear exam) as NA values
+        fontanelle_bulging = as.logical(fontanelle_bulging),
+        hematoma = as.logical(hematoma),
+        clavicle_trauma = as.logical(clavicle_trauma),
+        neurological_deficit = as.logical(neurological_deficit),
+        other_significant_injuries = as.logical(other_significant_injuries),
+        ct_form = as.logical(ct_form),
+        ct_done = as.logical(ct_done),
+        death_tbi = as.logical(death_tbi),
+        citbi_outcome = as.logical(citbi_outcome)
+    )
+```
+
+```{r}
+# Convert NO yes/no columns (character vectors) to factors
+# loss_of_consciousness_len, seizure_len, GCSEye, GCSVerbal, GCSMotor, and gender (6 columns total)
+
+# Length of loss of consciousness
+citbi <- citbi |>
+    mutate(
+    loss_of_consciousness_len = factor(loss_of_consciousness_len,
+    levels = c(1,2,3,4),
+    labels = c("<5 sec", "5 sec - <1 min", "1-5 min", ">5 min"))
+    )
+
+# Length of post-traumatic seizure
+citbi <- citbi |>
+    mutate(
+        seizure_len = factor(seizure_len,
+        levels = c(1,2,3,4),
+        labels = c("< 1 min", "1 - <5 min", "5-15 min", ">15 min"))
+    )
+
+# GCS component: Eye
+citbi <- citbi |>
+    mutate(
+        GCSEye = factor(GCSEye,
+        levels = c(1,2,3,4),
+        labels = c("None", "Pain", "Verbal", "Spontaneous"))
+    )
+
+# GCS component: Verbal
+citbi <- citbi |>
+    mutate(
+        GCSVerbal = factor(GCSVerbal,
+        levels = c(1,2,3,4,5),
+        labels = c("None", "Incomprehensible sounds (moans)", "Inappropriate words (cries to pain)", "Confused (irritable/cries)", "Oriented (coos/babbles)"))
+    )
+
+# GCS component: Motor
+citbi <- citbi |>
+    mutate(
+        GCSMotor = factor(GCSMotor,
+        levels = c(1,2,3,4,5,6),
+        labels = c("None", "Abnormal extension posturing", "Abnormal flexure posturing", "Withdraws to pain", "Localizes pain (withdraws to touch)", "Follow commands (spontaneous movement)"))
+    )
+
+# Gender
+citbi <- citbi |>
+    mutate(
+        gender = factor(gender,
+        levels = c(1,2),
+        labels = c("Male", "Female"))
+    )
+```
+
+{{< pagebreak >}}
+
+## Part II: Exploratory Data Analysis (EDA)
+- The goal of EDA is to better understand the data, identify patterns, and generate hypotheses.
+- Additionally, EDA presents an opportunity to create data products that can be shared with others.
+
+**4. Create a Missing Data Summary:**
+- I used across() to compute missing-value counts and proportions for every variable, then reshaped the output into a tidy table using pivot_longer() and .value naming.
+
+```{r}
+missing_values <- citbi |>
+    summarize(across(everything(),
+    list(
+        "n_missing" = ~sum(is.na(.)),
+        "prop_missing" = ~mean(is.na(.))
+    ),
+    .names = "{.col}--{.fn}")   #Separate the column name with n_missing & prop_missing for clarity
+    ) |>
+    pivot_longer(               #Reshape from wide -> long
+        cols = everything(),    #Select all columns
+        names_to = c("variables", ".value"), #Split columns into "variables" (original variable name) and ".value" (creates new columns: n_missing, prop_missing)
+        names_sep = "--"  #Match the separator above
+    )
+missing_values   # 28 rows & 3 columns
+```
+
+**5. Create a histogram of the patient ages in months**
+
+```{r}
+patient_age_histogram <- citbi |>
+    ggplot(aes(x = age_in_month)) +
+    geom_histogram(binwidth = 8, color = "black", fill = "pink") +
+    labs(
+        title = "The Histogram of Patient Ages",
+        subtitle = "PECARN Emergency Departments",
+        x = "Ages (In Months)",
+        y = "Count") +
+    theme_minimal()
+
+patient_age_histogram
+```
+
+*Interesting patterns noticed:* 
+1. The patients’ age distribution is **right-skewed**, with a high concentration of infants, particularly between **0–40 months**, and a secondary increase during adolescence (approx. **150–200 months**, or **12–17 years**).
+2. This secondary rise may be related to:
+a. sports-related injuries,
+b. increased risk-taking behavior, and
+c. greater independence from parental supervision.
+3. There's **a gradual decline in patient counts after early infancy (around 16 months) through approx. 150 months**, followed by **a sharp drop after 200 months** (likely because of the study age cutoff).
+
+**6. Create a grouped summary table that shows the total count of patients for every combination of the loss of consciousness length and ciTBI outcome columns**
+
+```{r}
+loclen_citbi <- citbi |>
+    group_by(loss_of_consciousness_len, citbi_outcome) |> # 13 groups
+    summarize(count = n()) |> # count
+    ungroup()
+
+loclen_citbi
+```
+
+*Notice:*
+- Longer duration of loss of consciousness (LOC) is associated with a higher risk of traumatic brain injury.
+Specifically, the number of patients with a positive outcome increases with LOC duration:
+< 5 seconds: 8 TRUE cases
+5 seconds to < 1 minute: 25 TRUE cases
+1–5 minutes: 30 TRUE cases
+> 5 minutes: 90 TRUE cases (highest)
+
+**7. Create a bar chart to visualize for each category side-by-side in length of loss of consciousness by ciTBI outcome**
+*Idea:*
+- x-axis: LOC
+- y-axis: counts of patients
+- geom_bar(): automatically counts (no y needed)
+- Bars grouped by ciTBI outcome (TRUE vs FALSE) #fill does this job!
+
+```{r}
+LOC_by_ciTBI_bar <- citbi |>
+    drop_na(loss_of_consciousness_len, citbi_outcome) |> # drop NA values
+    mutate(citbi_outcome = ifelse(citbi_outcome, "ciTBI", "No ciTBI")) |>
+    ggplot(aes(x = loss_of_consciousness_len, fill = citbi_outcome)) + 
+    geom_bar(position = "dodge", color = "black") + #position = "dodge": no stack bars! (but side-by-side)
+    labs(
+        title = "Length of Loss of Consciousness by ciTBI outcome",
+        subtitle = "PECARN Emergency Departments",
+        x = "Length of Loss of Consciousness (LOC)",
+        y = "Count",
+        fill = "ciTBI Outcome"
+    ) +
+    theme_minimal()
+LOC_by_ciTBI_bar
+```
+
+**8. Create 3 visualizations for the relationship between total GCS score, Age in years, and ciTBI outcome**
+- GCSTotal ~ Glasgow Coma Scale score, a neurological assessment used to evaluate the patient's level of consciousness.
+
+```{r}
+# Age in Years:
+citbi <- citbi |>
+    mutate(age_in_year = as.integer(age_in_month / 12))
+
+citbi
+```
+
+*a. A stacked normalized bar chart to visualize how the proportion of patients with ciTBI varies across different ages*
+
+```{r}
+ciTBI_by_age <- citbi |>
+    drop_na(citbi_outcome) |>
+    mutate(citbi_outcome = ifelse(citbi_outcome, "ciTBI", "No ciTBI")) |>
+    ggplot(aes(x = age_in_year, fill = citbi_outcome)) +
+    geom_bar(position = "fill", color = "black") + #position = "fill": normalizes each bar to 100% -> each bar shows proportion, not raw count (default)
+    labs(
+        title = "Proportion of patients with ciTBi by Age",
+        subtitle = "PECARN Emergency Departments",
+        x = "Age (in Years)",
+        y = "Proportion",
+        fill = "ciTBI Outcome"
+    ) +
+    theme_minimal()
+
+ciTBI_by_age
+```
+
+*b. A stacked normalized bar chart shows the proportion of patients with ciTBI across age, now faceted by total GCS score*
+- To explore whether the relationship between age and ciTBI differs across Glasgow Coma Scale scores.
+
+```{r}
+ciTBI_by_age_facet <- citbi |>
+    drop_na(citbi_outcome, GCSTotal) |>
+    mutate(citbi_outcome = ifelse(citbi_outcome, "ciTBI", "No ciTBI")) |>
+    ggplot(aes(x = age_in_year, fill = citbi_outcome)) +
+    geom_bar(position = "fill", color = "black") +
+    facet_wrap(~ GCSTotal) +
+    labs(
+        title = "Proportion of patients with ciTBi by Age",
+        subtitle = "PECARN Emergency Departments",
+        x = "Age (in Years)",
+        y = "Proportion",
+        fill = "ciTBI Outcome"
+    ) +
+    theme_minimal()
+
+ciTBI_by_age_facet 
+```
+
+*c. A stacked bar chart shows the number of patients with ciTBI across age faceted by total GCS score*
+
+```{r}
+ciTBI_by_age_count <- citbi |>
+    mutate(citbi_outcome = ifelse(citbi_outcome, "ciTBI", "No ciTBI")) |>
+    ggplot(aes(x = age_in_year, fill = citbi_outcome)) +
+    geom_bar(color = "black") +
+    facet_wrap(~ GCSTotal, scales = "free_y") + #scales = "free_y": it lets each facet scale independently (for easier exploration)
+    labs(
+        title = "Number of patients with ciTBi by Age",
+        subtitle = "PECARN Emergency Departments",
+        x = "Age (in Years)",
+        y = "Count",
+        fill = "ciTBI Outcome"
+    ) +
+    theme_bw()
+
+ciTBI_by_age_count
+```
+
+**9. Create a scatter plot to visualize any two numeric variables in the dataset**
+- I chose to visualize GCSTotal with age_in_year, colored by citbi_outcome.
+```{r}
+GCS_score_by_Age_ciTBI <- citbi |>
+    drop_na(age_in_year, GCSTotal, citbi_outcome) |>
+    mutate (citbi_outcome = ifelse(citbi_outcome, "ciTBI", "No ciTBI")) |>
+    ggplot(aes(
+        x = age_in_year, 
+        y = GCSTotal, 
+        color = citbi_outcome)) +
+    geom_jitter(width = 0.2, height = 0.2, alpha = 0.4) + #or geom_point(position = "jitter", alpha = 0.4)
+    labs(
+        title = "GCS Score by Age",
+        subtitle = "Colored by ciTBI Outcome",
+        x = "Age (in Years)",
+        y = "Total GCS",
+        color = "ciTBI Outcome"
+    ) +
+    theme_minimal()
+```
+
+*Interesting patterns noticed:* 
+1. Lower GCS scores are associated with a higher likelihood of ciTBI.
+2. Higher GCS scores are strongly associated with no ciTBI.
+3. There is strong clustering of patients at high GCS scores, indicating most patients present with mild neurologic impairment.
+4. GCS scores <8 show a noticeably higher concentration of ciTBI cases.
+5. GCS scores >12 are dominated by non-ciTBI cases, with ciTBI events being rare.
+6. Age shows no clear separation between ciTBI and non-ciTBI cases, suggesting that GCS score is a stronger indicator of ciTBI risk than age & age alone does not have much valuable predictive value.
+
+**10. Create a table that summarizes at least 2 statistics grouped by 2 categorical variables**
+- I chose 2 categorical variables: gender and death_tbi.
+- **My question:** "Is there a difference in TBI-related death rates by gender?"
+
+```{r}
+death_by_gender <- citbi |>
+    drop_na(gender, death_tbi) |>
+    group_by(gender, death_tbi) |> #grouped by 2 categorical variables
+    summarise(
+        count = n(), #count number of patients: 4 rows x 3 columns
+        .groups = "drop" #ungroup
+    ) |>
+    group_by(gender) |>
+    mutate(
+        proportion = count / sum(count) #death rate within gender
+    )
+```
+
+*Interesting patterns noticed:* 
+1. TBI-related death is rare in both genders, with mortality rates well below 1%; specifically, the proportion is approximately 0.0013 in males and 0.0023 in females.
+2. Females show a slightly higher proportion of TBI-related deaths compared to males.
+3. Overall case counts differ by gender, with more male patients than female patients, while the absolute number of deaths is similar between the 2 groups.
+
+## Extra:
+- I realized that I was interested in identifying patterns related to **gender** and wanted to explore its relationship with **other categorical variables**. 
+- To do this more efficiently, I built a reusable function that allows me to examine patterns between gender and any categorical variable simply by supplying the variable name.
+
+```{r}
+gender_related <- function(categorical_variable){
+    citbi |>
+    drop_na(gender, {{ categorical_variable }} ) |>
+    group_by(gender, {{ categorical_variable }}) |>
+    summarise(
+        count = n(),
+        .groups = "drop"
+    ) |>
+    group_by(gender) |>
+    mutate(
+        proportion = count / sum(count)
+    )
+}
+```
+
+```{r}
+#Check to see if my function right:
+gender_related(neurological_deficit) #Now, it works as expected!
+```
+
+
+## Save all the data products for report.qmd:
+```{r}
+saveRDS(patient_age_histogram, "patient_age_histogram.rds")
+saveRDS(LOC_by_ciTBI_bar, "LOC_by_ciTBI_bar.rds")
+saveRDS(citbi, "citbi.rds")
+saveRDS(ciTBI_by_age_facet, "ciTBI_by_age_facet.rds")
+saveRDS(GCS_score_by_Age_ciTBI, "GCS_score_by_Age_ciTBI.rds")
+```

@@ -1,0 +1,80 @@
+{
+  "cells": [
+    {
+      "cell_type": "raw",
+      "metadata": {},
+      "source": [
+        "---\n",
+        "title: \"Reflections: Errors and Lessons\"\n",
+        "format: html\n",
+        "---"
+      ],
+      "id": "ffc63dba"
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "## 1. REFLECTION 1: DATA CLEANING STEP\n",
+        "- I think at the **Data Cleaning** step, I can do:\n",
+        "\n",
+        "*citbi[citbi == 91] <- NA*\n",
+        "\n",
+        "*citbi[citbi == 92] <- NA*\n",
+        "\n",
+        "or *citbi[citbi %in% c(91, 92)] <- NA*\n",
+        "\n",
+        "or citbi |> mutate(\n",
+        "    across(everything(), ~ifelse(.x %in% c(91, 92), NA, .x))\n",
+        ")\n",
+        "\n",
+        "### Code used:\n",
+        "- Subsetting with logical vectors.\n",
+        "- mutate(across(.cols, .fns)): .cols = which columns, .fns = what functions to apply \n",
+        "\n",
+        "#.x = current column\n",
+        "\n",
+        "### Why this approach?\n",
+        "\n",
+        "- **Efficiency:** It's faster and more concise than handling each column individually.\n",
+        "\n",
+        "- **Consistency:** It produces the same result as column-by-column replacement I did.\n",
+        "\n",
+        "- **Scope:** The method is applied to the entire data frame, ensuring all coded missing values (91, 92) are handled uniformly without relying on manual column identification.\n",
+        "\n",
+        "### What I will do next time:\n",
+        "\n",
+        "- To save time and avoid unnecessary long code, I will apply this transformation at the data-cleaning stage, especially when working with large data frames that contain many columns with coded values such as 91 and 92.\n",
+        "\n",
+        "### When NOT to apply this globally:\n",
+        "\n",
+        "- If 91 or 92 are valid values in some variables (e.g., IDs, real measurements).\n",
+        "\n",
+        "- When these values carry real analytical meaning, rather than simply serving as sentinel codes for missingness across the dataset.\n",
+        "\n",
+        "## 2. LESSON 1: IN CREATING A MISSING DATA SUMMARY\n",
+        "### What I learned:\n",
+        "1. across() must be used inside data-masking verbs like summarize(), mutate(), filter(), etc.\n",
+        "2. I initially wasn’t sure how to pass all columns to pivot_longer(). Using everything() in the cols argument applies the transformation to the entire dataset.\n",
+        "3. \n",
+        "- \".value\" in pivot_longer(): it tells pivot_longer() to use part of the column name as column headers.\n",
+        "- names_sep = \"--\": doing the splitting.\n",
+        "## 3. LESSON 2: IN CREATING A BAR CHART\n",
+        "### What I learned:\n",
+        "- geom_bar(): automatically counts observations, so no y needed!\n",
+        "- However, if we wanted to use geom_bar with the column count (available) ~ no re-counts: add **stat = \"identity\"** as the 2nd arg in geom_bar().\n",
+        "### Another approach for Question 7, using the data frame loclen_citbi instead of citbi:"
+      ],
+      "id": "116e909a"
+    }
+  ],
+  "metadata": {
+    "kernelspec": {
+      "display_name": "Python 3",
+      "language": "python",
+      "name": "python3"
+    }
+  },
+  "nbformat": 4,
+  "nbformat_minor": 5
+}
