@@ -33,8 +33,14 @@ I'm currently exploring how Generative AI can enhance the analytics workflow—f
 
 ---
 ## 📂 Portfolio Projects 📁
-*Coming Soon* ⏳
 
+| Project | Stack | Scope | Headline Finding |
+| :--- | :--- | :--- | :--- |
+| **🛒 E-Commerce Customer Analytics**<br><sub>[README.md](https://github.com/kartlynng/Data-Analytics-Portfolio/tree/main/online-retail-analytics) · [Live Dashboard ↗](https://public.tableau.com/app/profile/trinh.nguyen3873/viz/UCIOnlineRetail_17853364241720/Dashboard1?publish=yes)</sub> | BigQuery SQL · Tableau | 541,909 transactions<br>4,372 customers · 38 countries<br>Dec 2010 – Dec 2011 | RFM segmentation isolated **667 lapsed high-value accounts** — 15.4% of the customer base, averaging $1,290.8 lifetime value and ~152 days inactive. A ~$861K book of recoverable revenue that no existing campaign was targeting. |
+| **🎬 Netflix Content Strategy**<br><sub>[README.md](https://github.com/kartlynng/Data-Analytics-Portfolio/tree/main/netflix-content-strategy) · [Code](https://github.com/kartlynng/Data-Analytics-Portfolio/tree/main/netflix-content-strategy/sql)</sub> | BigQuery SQL | 8,807 titles · 12 attributes<br>Catalog through 2021 | Production hubs specialise sharply by genre — the **US in Dramas, India in International Movies, the UK in British TV** — with Drama the only genre ranking top-3 in all three markets, making it the single defensible target for cross-market investment. |
+| **🎵 Spotify Retention Pipeline**<br><sub>🚧 In progress — target August 2026</sub> | Google Sheets API · PostgreSQL · Python · Power BI | 50,000 subscriber profiles | Four-layer pipeline with a raw/staging/mart warehouse, automated data-quality gates, and a governed Sheets reference layer. Design document published; implementation underway. |
+
+*More Coming Soon* ⏳
 ---
 ## 📜 Relevant Certifications & Credentials
 > ⚠️ **WARNING:** Proceed with caution! 🛑
