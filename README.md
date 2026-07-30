@@ -50,14 +50,11 @@ I'm currently exploring how Generative AI can enhance the analytics workflow—f
         <sub><a href="https://github.com/kartlynng/Data-Analytics-Portfolio/blob/main/h1b-employer-sponsorship-analysis/kartlyn-h1b-analysis.ipynb">Notebook ↗</a></sub>
       </td>
       <td valign="top">
-        Python<br>
-        pandas<br>
-        Feature Engineering<br>
-        Logistic Regression<br>
-        Random Forest<br>
-        ROC-AUC Evaluation<br>
-        scikit-learn<br>
-        Plotly
+        • Python<br>
+        • Feature Engineering<br>
+        • Cross Validation<br>
+        • Machine Learning<br>
+        • Plotly
       </td>
       <td valign="top">
         • USCIS FY2026 dataset<br>
@@ -75,11 +72,10 @@ I'm currently exploring how Generative AI can enhance the analytics workflow—f
         <sub><a href="https://github.com/kartlynng/Data-Analytics-Portfolio/tree/main/pediatric-tbi-risk-analytics/report">Report PDF ↗</a></sub>
       </td>
       <td valign="top">
-        R<br>
-        Quarto<br>
-        Statistical Analysis<br>
-        Positron<br>
-        ggplot2
+        • R<br>
+        • Quarto<br>
+        • Statistical Analysis<br>
+        • ggplot2
       </td>
       <td valign="top">
         • PECARN ER Dataset<br>
@@ -97,11 +93,11 @@ I'm currently exploring how Generative AI can enhance the analytics workflow—f
         <sub><a href="https://public.tableau.com/app/profile/trinh.nguyen3873/viz/UCIOnlineRetail_17853364241720/Dashboard1?publish=yes">Live Dashboard ↗</a></sub>
       </td>
       <td valign="top">
-        BigQuery SQL<br>
-        Window Functions<br>
-        CTEs<br>
-        RFM Segmentation<br>
-        Tableau
+        • BigQuery SQL<br>
+        • Window Functions<br>
+        • CTEs<br>
+        • RFM Segmentation<br>
+        • Tableau
       </td>
       <td valign="top">
         • 541,909 transactions<br>
@@ -119,10 +115,8 @@ I'm currently exploring how Generative AI can enhance the analytics workflow—f
         <a href="https://github.com/kartlynng/Data-Analytics-Portfolio/tree/main/netflix-content-strategy"><b>🎬 Netflix Content Strategy</b></a>
       </td>
       <td valign="top">
-        BigQuery SQL<br>
-        Exploratory Analytics<br>
-        Window Functions<br>
-        CTEs
+        • BigQuery SQL<br>
+        • Exploratory Analytics
       </td>
       <td valign="top">
         • 8,807 titles<br>
@@ -140,11 +134,11 @@ I'm currently exploring how Generative AI can enhance the analytics workflow—f
         <sub>🚧 In progress — target September 2026</sub>
       </td>
       <td valign="top">
-        Google Sheets API<br>
-        PostgreSQL<br>
-        Python ETL<br>
-        Data Validation<br>
-        Power BI
+        • GG Sheets<br>
+        • PostgreSQL<br>
+        • Python ETL<br>
+        • Data Validation<br>
+        • Power BI
       </td>
       <td valign="top">• 50,000 subscriber profiles</td>
       <td valign="top">
@@ -158,11 +152,10 @@ I'm currently exploring how Generative AI can enhance the analytics workflow—f
         <sub>🚧 In progress — target August 2026</sub>
       </td>
       <td valign="top">
-        Excel<br>
-        Power Query ETL<br>
-        Data Modeling<br>
-        DAX<br>
-        Power Pivot
+        • Excel<br>
+        • Power Query ETL<br>
+        • Data Modeling<br>
+        • Power Pivot
       </td>
       <td valign="top">
         • 3 relational datasets<br>
