@@ -31,7 +31,7 @@ Using **Google BigQuery**, raw transactional data was transformed into a standar
 Designed for data integrity, reproducibility, and query efficiency:
 
 ```text
-ecommerce-sales-analytics/
+online-retail-analytics/
 │
 ├── data/
 │   ├── raw/                      # Unprocessed raw transaction data (Online Retail.xlsx / CSV)
