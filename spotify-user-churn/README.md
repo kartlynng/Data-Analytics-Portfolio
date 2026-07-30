@@ -11,7 +11,7 @@
 </p>
 
 ---
-## 📌 Executive Summary
+## 📊 Project Overview
 An end-to-end data analytics and machine learning project analyzing **~50,000 Spotify user profiles** to discover engagement patterns, evaluate ad monetization conversion, predict account inactivity/churn, and deliver executive insights via an interactive dashboard.
 
 ---
