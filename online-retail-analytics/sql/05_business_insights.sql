@@ -103,7 +103,7 @@ WITH first_purchase AS (
 cohort_size AS (
     SELECT
         cohort_month,
-        COUNT(*) AS total_cohort_customers
+        COUNT(DISTINCT CustomerID) AS total_cohort_customers
     FROM first_purchase
     GROUP BY cohort_month
 ),
@@ -125,7 +125,7 @@ retention_matrix AS (
     SELECT
         cohort_month,
         months_since_cohort,
-        COUNT(*) AS active_customers
+        COUNT(DISTINCT CustomerID) AS active_customers
     FROM customer_activities
     GROUP BY cohort_month, months_since_cohort
 )
@@ -134,7 +134,7 @@ SELECT
     r.months_since_cohort,
     s.total_cohort_customers,
     r.active_customers,
-    ROUND(r.active_customers / s.total_cohort_customers * 100, 2) AS retention_rate_pct
+    ROUND(r.active_customers / s.total_cohort_customers, 2) AS retention_rate_pct
 FROM retention_matrix AS r
 JOIN cohort_size AS s
     ON r.cohort_month = s.cohort_month
