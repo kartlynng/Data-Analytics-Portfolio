@@ -40,9 +40,7 @@ I'm currently exploring how Generative AI can enhance the analytics workflow—f
 | [**🎬 Netflix Content Strategy**](https://github.com/kartlynng/Data-Analytics-Portfolio/tree/main/netflix-content-strategy) | BigQuery SQL | • 8,807 titles<br>• 12 attributes<br>• Catalog through 2021 | • Production hubs specialise sharply by genre — the **US in Dramas, India in International Movies, the UK in British TV**.<br><br>• Drama is the only genre ranking top-3 in all three markets, making it the single defensible target for cross-market investment. |
 | [**🎵 Spotify Retention Pipeline**](https://github.com/kartlynng/Data-Analytics-Portfolio/tree/main/spotify-user-churn)<br><sub>🚧 In progress — target August 2026</sub> | Google Sheets API · PostgreSQL · Python · Power BI | • 50,000 subscriber profiles | • Four-layer pipeline with a raw/staging/mart warehouse, automated data-quality gates, and a governed Sheets reference layer.<br><br>• Design document published; implementation underway. |
 
-<br>
-
-### *More Coming Soon* ⏳
+*More Coming Soon* ⏳
 
 ---
 ## 📜 Relevant Certifications & Credentials
