@@ -112,7 +112,7 @@ I'm currently exploring how Generative AI can enhance the analytics workflow—f
     </tr>
     <tr>
       <td valign="top">
-        <a href="https://github.com/kartlynng/Data-Analytics-Portfolio/tree/main/netflix-content-strategy"><b>🎬 Netflix Content Strategy</b></a>
+        <a href="https://github.com/kartlynng/Data-Analytics-Portfolio/tree/main/netflix-content-strategy"><b>🎬 Netflix Content Strategy</b></a><br>
       <sub><a href="https://github.com/kartlynng/Data-Analytics-Portfolio/tree/main/netflix-content-strategy/sql">SQL scripts ↗</a></sub>
       </td>
       <td valign="top">
