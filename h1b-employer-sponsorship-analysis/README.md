@@ -1,12 +1,12 @@
 # 💼 H-1B Employer Sponsorship Analysis & Approval Prediction (FY2026)
-<p align="center">
+<p align="left">
   <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python" height="28" />
   <img src="https://img.shields.io/badge/pandas-%23150458.svg?style=flat-square&logo=pandas&logoColor=white" alt="pandas" height="28" />
   <img src="https://img.shields.io/badge/numpy-%23013243.svg?style=flat-square&logo=numpy&logoColor=white" alt="NumPy" height="28" />
   <img src="https://img.shields.io/badge/scikit--learn-%23F7931E.svg?style=flat-square&logo=scikit-learn&logoColor=white" alt="scikit-learn" height="28" />
   <img src="https://img.shields.io/badge/Plotly-%233F4F75.svg?style=flat-square&logo=plotly&logoColor=white" alt="Plotly" height="28" />
   <img src="https://img.shields.io/badge/Jupyter-F37626?style=flat-square&logo=jupyter&logoColor=white" alt="Jupyter" height="28" />
-</p>
+</div>
 
 <p align="center">
   <img src="docs/images/h1b1-visa_feature.jpg" alt="H1B Analysis Banner" width="100%" />
