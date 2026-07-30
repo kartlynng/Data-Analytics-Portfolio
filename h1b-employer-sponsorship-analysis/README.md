@@ -74,17 +74,17 @@ The **USCIS H-1B Employer Data Hub (FY2026)** contains employer-level petition c
 1. **Professional, Scientific & Technical Services dominates H-1B demand**, accounting for ~37,200 total approvals — more than 3.5x the next-largest industry (Manufacturing, ~10,160), with Information (~7,500) and Finance & Insurance (~7,300) rounding out the top four.
    - *Insight:* H-1B sponsorship is heavily concentrated in tech-adjacent professional services rather than spread evenly across the economy — useful context for job seekers weighing industry choice against sponsorship likelihood.
 
-![Proof](docs/images/Insight 1.png)
+![Proof](docs/images/Insight_1.png)
 
 2. **New York and the Bay Area anchor sponsorship geography.** New York, NY (4,834 approvals) and Arlington, VA (2,840) lead, with San Francisco, San Jose, Santa Clara, and Mountain View collectively placing four Bay Area cities in the top 10.
    - *Insight:* Confirms sponsorship activity clusters around major tech and consulting hubs rather than being nationally distributed.
 
-![Proof](docs/images/Insight 2.png)
+![Proof](docs/images/Insight_2.png)
 
 3. **Sponsorship is top-heavy among a small set of employers.** Amazon (2,008), Tata Consultancy Services (1,518), Microsoft (1,179), Infosys (1,139), and Google (1,040) account for a disproportionate share of approvals relative to the ~24,000 employers in the dataset.
    - *Insight:* Large tech firms and IT consulting/staffing firms (TCS, Infosys, Cognizant) both appear prominently — two structurally different sponsor profiles worth distinguishing in future work.
 
-![Proof](docs/images/Insight 3.png)
+![Proof](docs/images/Insight_3.png)
 
 ### Model Evaluation Performance
 
