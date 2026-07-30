@@ -26,9 +26,9 @@ I'm currently exploring how Generative AI can enhance the analytics workflow—f
 
 ## 🛠️ Tech Stack & Favorite Tools 🎀
 
-* **Spreadsheets & Modeling:** Advanced Excel (Dynamic Arrays, `XLOOKUP`, `INDEX/MATCH`, `FILTER`), Power Query, VBA/Macros, Financial & Operational Modeling
-* **Database Management:** SQL (BigQuery, PostgreSQL, MySQL) — Data Cleaning, Multi-table Joins, CTEs, Window Functions
-* **Data Science & Scripting:** Python (`pandas`, `numpy`, `matplotlib`, `seaborn`)
+* **Spreadsheets & Modeling:** Advanced Excel (Dynamic Arrays, `XLOOKUP`, `INDEX/MATCH`, `FILTER`), Power Query, Financial & Operational Modeling
+* **Database Management:** SQL (BigQuery, PostgreSQL) — Data Cleaning, Multi-table Joins, CTEs, Window Functions
+* **Data Science & Scripting:** Python (`pandas`, `numpy`, `matplotlib`, `seaborn`, `plotly`, `scikit-learn`, ` Statsmodels`)
 * **Business Intelligence:** Power BI, Tableau, Looker Studio (DAX, Interactive Dashboards, Data Storytelling)
 
 ---
