@@ -30,12 +30,16 @@ Understanding user retention, listening habits, and subscription conversion dyna
 
 ```text
                        DATA LIFECYCLE ARCHITECTURE
-                      
-  ┌──────────────┐     ┌──────────────┐     ┌──────────────┐     ┌──────────────┐
-  │ Google Sheets│ ──> │  PostgreSQL  │ ──> │    Python    │ ──> │   Power BI   │
-  │ (Raw Ingest) │     │ (EDA & Model)│     │  (ML & ETL)  │     │ (Executive)  │
-  └──────────────┘     └──────────────┘     └──────────────┘     └──────────────┘
+┌──────────────────┐   ┌──────────────────┐   ┌──────────────────┐   ┌──────────────────┐
+│  Google Sheets   │──▶│    PostgreSQL    │──▶│      Python      │──▶│     Power BI     │
+│                  │   │                  │   │                  │   │                  │
+│ Business-owned   │   │ raw → stg → mart │   │ ETL orchestration│   │ Star-schema model│
+│ reference tables │   │ Star schema      │   │ Quality gates    │   │ DAX measures     │
+│ (pricing, region │   │ Enforced FKs     │   │ Hypothesis tests │   │ Cohort retention │
+│  mapping, targets)│  │                  │   │                  │   │ CI bands         │
+└──────────────────┘   └──────────────────┘   └──────────────────┘   └──────────────────┘
 ```
+
 ### 💡 Why Google Sheets over Excel for Raw Ingestion?
 
 I use a MacBook, and I once received this message from a classmate during a peer-reviewed assignment:
