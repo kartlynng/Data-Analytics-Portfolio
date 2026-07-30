@@ -32,7 +32,7 @@ I'm currently exploring how Generative AI can enhance the analytics workflow—f
 * **Business Intelligence:** Power BI, Tableau, Looker Studio (DAX, Interactive Dashboards, Data Storytelling)
 
 ---
-# 📂 Portfolio Projects 📂
+## 📂 Portfolio Projects 📂
 
 <table width="100%">
   <thead>
@@ -57,7 +57,7 @@ I'm currently exploring how Generative AI can enhance the analytics workflow—f
         • Dec 2010 – Dec 2011
       </td>
       <td valign="top">
-        • RFM segmentation isolated <b>667 lapsed high-value accounts</b> — 15.4% of the customer base, averaging $1,290.8 lifetime value and ~152 days inactive.<br><br>
+        • RFM segmentation isolated <b>667 lapsed high-value accounts</b> — 15.4% of the customer base, averaging $1,290.8 lifetime value and ~152 days inactive.<br>
         • A <b>~$861K book of recoverable revenue</b> that no existing campaign was targeting.
       </td>
     </tr>
@@ -72,7 +72,7 @@ I'm currently exploring how Generative AI can enhance the analytics workflow—f
         • Catalog through 2021
       </td>
       <td valign="top">
-        • Production hubs specialise sharply by genre — the <b>US in Dramas, India in International Movies, the UK in British TV</b>.<br><br>
+        • Production hubs specialise sharply by genre — the <b>US in Dramas, India in International Movies, the UK in British TV</b>.<br>
         • Drama is the only genre ranking top-3 in all three markets, making it the single defensible target for cross-market investment.
       </td>
     </tr>
@@ -89,16 +89,15 @@ I'm currently exploring how Generative AI can enhance the analytics workflow—f
       </td>
       <td valign="top">• 50,000 subscriber profiles</td>
       <td valign="top">
-        • Four-layer pipeline with a raw/staging/mart warehouse, automated data-quality gates, and a governed Sheets reference layer.<br><br>
+        • Four-layer pipeline with a raw/staging/mart warehouse, automated data-quality gates, and a governed Sheets reference layer.<br>
         • Design document published; implementation underway.
       </td>
     </tr>
   </tbody>
 </table>
 
-<br>
-
 *More Coming Soon* ⏳
+
 ---
 ## 📜 Relevant Certifications & Credentials
 > ⚠️ **WARNING:** Proceed with caution! 🛑
