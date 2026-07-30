@@ -4,6 +4,6 @@
 [![Data Engine](https://img.shields.io/badge/Data_Engine-Data_Model_(xVelocity)-orange)](#)
 
 <p align="center">
-  <img src="templates/airbnb-banner.jpg" alt="Airbnb" width="100%" />
+  <img src="templates/airbnb_logo_detail.png" alt="Airbnb" width="100%" />
 </p>
 
