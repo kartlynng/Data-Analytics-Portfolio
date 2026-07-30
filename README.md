@@ -46,6 +46,22 @@ I'm currently exploring how Generative AI can enhance the analytics workflow—f
   <tbody>
     <tr>
       <td valign="top">
+        <a href="https://github.com/kartlynng/Data-Analytics-Portfolio/tree/main/pediatric-tbi-risk-analytics"><b>🏥 Pediatric TBI Risk Analytics</b></a><br>
+        <sub><a href="https://github.com/kartlynng/Data-Analytics-Portfolio/blob/main/pediatric-tbi-risk-analytics/report.pdf">Report PDF ↗</a></sub>
+      </td>
+      <td valign="top">R · Quarto<br>Positron · ggplot2</td>
+      <td valign="top">
+        • PECARN ER Dataset<br>
+        • Pediatric head trauma<br>
+        • EDA & Reporting
+      </td>
+      <td valign="top">
+        • Total GCS score overrides age as a primary indicator of ciTBI risk.<br>
+        • Loss of Consciousness > 5 mins (90 cases) & co-occurring clavicle trauma (~2.1% vs ~1.2%) serve as critical triage indicators for neuroimaging.
+      </td>
+    </tr>
+    <tr>
+      <td valign="top">
         <a href="https://github.com/kartlynng/Data-Analytics-Portfolio/tree/main/online-retail-analytics"><b>🛒 E-Commerce Customer Analytics</b></a><br>
         <sub><a href="https://public.tableau.com/app/profile/trinh.nguyen3873/viz/UCIOnlineRetail_17853364241720/Dashboard1?publish=yes">Live Dashboard ↗</a></sub>
       </td>
@@ -79,7 +95,7 @@ I'm currently exploring how Generative AI can enhance the analytics workflow—f
     <tr>
       <td valign="top">
         <a href="https://github.com/kartlynng/Data-Analytics-Portfolio/tree/main/spotify-user-churn"><b>🎵 Spotify Retention Pipeline</b></a><br>
-        <sub>🚧 In progress — target August 2026</sub>
+        <sub>🚧 In progress — target September 2026</sub>
       </td>
       <td valign="top">
         Google Sheets API<br>
