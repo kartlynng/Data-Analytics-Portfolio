@@ -62,7 +62,7 @@ I'm currently exploring how Generative AI can enhance the analytics workflow—f
         • Aggregation & Modeling
       </td>
       <td valign="top">
-        • Professional, Scientific & Technical Services dominates demand (~37,200 approvals), >3.5x higher than Manufacturing.<br>
+        • Professional, Scientific & Technical Services dominates demand (~37,200 approvals), >3.5x higher than Manufacturing.<br><br>
         • Employer, industry, and state alone are weak predictors of approval outcome (<b>AUC ≈ 0.53</b>), proving case-specific factors (wage levels, job duties) drive decisions over aggregate employer metrics.
       </td>
     </tr>
@@ -83,7 +83,7 @@ I'm currently exploring how Generative AI can enhance the analytics workflow—f
         • EDA & Reporting
       </td>
       <td valign="top">
-        • Total GCS score overrides age as a primary indicator of ciTBI risk.<br>
+        • Total GCS score overrides age as a primary indicator of ciTBI risk.<br><br>
         • Loss of Consciousness > 5 mins (90 cases) & co-occurring clavicle trauma (~2.1% vs ~1.2%) serve as critical triage indicators for neuroimaging.
       </td>
     </tr>
@@ -106,7 +106,7 @@ I'm currently exploring how Generative AI can enhance the analytics workflow—f
         • Dec 2010 – Dec 2011
       </td>
       <td valign="top">
-        • RFM segmentation isolated <b>667 lapsed high-value accounts</b> — 15.4% of the customer base, averaging $1,290.8 lifetime value and ~152 days inactive.<br>
+        • RFM segmentation isolated <b>667 lapsed high-value accounts</b> — 15.4% of the customer base, averaging $1,290.8 lifetime value and ~152 days inactive.<br><br>
         • A <b>~$861K book of recoverable revenue</b> that no existing campaign was targeting.
       </td>
     </tr>
@@ -124,7 +124,7 @@ I'm currently exploring how Generative AI can enhance the analytics workflow—f
         • Catalog through 2021
       </td>
       <td valign="top">
-        • Production hubs specialise sharply by genre — the <b>US in Dramas, India in International Movies, the UK in British TV</b>.<br>
+        • Production hubs specialise sharply by genre — the <b>US in Dramas, India in International Movies, the UK in British TV</b>.<br><br>
         • Drama is the only genre ranking top-3 in all three markets, making it the single defensible target for cross-market investment.
       </td>
     </tr>
@@ -142,8 +142,7 @@ I'm currently exploring how Generative AI can enhance the analytics workflow—f
       </td>
       <td valign="top">• 50,000 subscriber profiles</td>
       <td valign="top">
-        • Four-layer pipeline with a raw/staging/mart warehouse, automated data-quality gates, and a governed Sheets reference layer.<br>
-        • Design document published; implementation underway.
+      *Coming Soon*
       </td>
     </tr>
     <tr>
@@ -163,9 +162,7 @@ I'm currently exploring how Generative AI can enhance the analytics workflow—f
         • Silicon Valley STR market
       </td>
       <td valign="top">
-        • Built a relational data model linking listings, daily availability, and reviews via Power Query ETL and Power Pivot.<br>
-        • Evaluated key hospitality yield metrics (<b>ADR, RevPAR, and Occupancy Rate %</b>) across sub-markets like Palo Alto and San Jose.<br>
-        • Formulated an interactive single-page executive dashboard with global Slicers to optimize short-term rental pricing strategy.
+      *Coming Soon*
       </td>
     </tr>
   </tbody>
