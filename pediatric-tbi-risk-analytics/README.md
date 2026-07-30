@@ -88,7 +88,7 @@ Synthesized EDA artifacts into a streamlined report for Dr. Bayes, featuring **3
 
 ![Proof](results/plots/LOC_by_ciTBI_bar.png)
 
-* **Co-Occurring Clavicle Trauma Signals Higher Force:** Patients presenting with clavicle trauma exhibit nearly **double the rate of ciTBI** (~2.1% vs ~1.2%) compared to those without, pointing to higher-impact mechanism of injury.
+* **Visible Head, Face, or Neck Trauma Nearly Doubles ciTBI Risk:** Patients with any evidence of trauma above the clavicles — laceration, abrasion, or hematoma to the scalp, face, or neck — show a ciTBI rate of **2.14%** (417/19,465) versus **1.16%** (125/10,810) in patients without.
 
 ![Proof](results/plots/clavicle_trauma_prop.png)
 
@@ -96,8 +96,7 @@ Synthesized EDA artifacts into a streamlined report for Dr. Bayes, featuring **3
 ### 🩺 Clinical & Operational Recommendations
 
 * **Prioritize Immediate CT Scans for LOC > 5 Minutes:** Establish strict clinical triage protocols requiring rapid neuroimaging and monitoring for pediatric patients with documented loss of consciousness exceeding 5 minutes.
-* **Use Physical Trauma Markers to Upgrade Risk Category:** Treat clavicle fractures/trauma as a critical secondary indicator of severe blunt force, lowering the threshold for advanced imaging even if baseline symptoms appear moderate.
+* **Treat Visible Above-Clavicle Trauma as a Risk Modifier, Not a Decision Rule:** External signs of head, face, or neck injury raise ciTBI probability roughly two-fold, but because the marker appears in nearly two-thirds of presentations it cannot stand alone as an imaging trigger. It is appropriately used alongside GCS and LOC duration, consistent with its role in the published PECARN prediction rule.
 * **Standardize GCS-Based Risk Stratification:** Rely on total GCS score over patient age when evaluating ciTBI probability, avoiding age-biased assumptions during initial emergency department triage.
 * **Target Infant Safety Education:** Focus pediatric head trauma prevention campaigns on infant safety (0–2 years) and adolescent injury prevention, aligned with the two primary volume peaks.
-
 
