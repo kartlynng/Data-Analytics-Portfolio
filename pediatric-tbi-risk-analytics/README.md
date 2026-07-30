@@ -1,6 +1,4 @@
 # 🏥 Pediatric Emergency Room Visits: Traumatic Brain Injury (ciTBI) Analysis
-<div align="center">
-
 ![R](https://img.shields.io/badge/R-276DC3?style=for-the-badge&logo=r&logoColor=white)
 ![Positron](https://img.shields.io/badge/Positron-00A3E0?style=for-the-badge&logo=posit&logoColor=white)
 ![Quarto](https://img.shields.io/badge/Quarto-75AADB?style=for-the-badge&logo=quarto&logoColor=white)
