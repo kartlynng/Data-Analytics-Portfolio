@@ -115,7 +115,7 @@ FROM `sql-projects-503512.uci_online_retail.online_retail_staging`;
 
 ![UCI Customer SegmentationDashboard](docs/images/customer-segmentation-dashboard.png)
 
-👉 **[View Customer Segmentation Tableau Dashboard Here](https://public.tableau.com/app/profile/trinh.nguyen3873/viz/UCIOnlineRetail_17853364241720/Dashboard1?publish=yes)**
+👉 **[View Customer Segmentation Tableau Dashboard Here](https://public.tableau.com/app/profile/trinh.nguyen3873/viz/UCIOnlineRetail_17853364241720/Dashboard2)**
 
 ---
 ## 📈 Key Business Findings & Recommendations
