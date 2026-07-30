@@ -47,9 +47,9 @@ I'm currently exploring how Generative AI can enhance the analytics workflow—f
     <tr>
       <td valign="top">
         <a href="https://github.com/kartlynng/Data-Analytics-Portfolio/tree/main/pediatric-tbi-risk-analytics"><b>🏥 Pediatric TBI Risk Analytics</b></a><br>
-        <sub><a href="https://github.com/kartlynng/Data-Analytics-Portfolio/blob/main/pediatric-tbi-risk-analytics/report.pdf">Report PDF ↗</a></sub>
+        <sub><a href="https://github.com/kartlynng/Data-Analytics-Portfolio/tree/main/pediatric-tbi-risk-analytics/report">Report PDF ↗</a></sub>
       </td>
-      <td valign="top">R · Quarto<br>Positron · ggplot2</td>
+      <td valign="top">R<br>Quarto<br>Positron<br>ggplot2</td>
       <td valign="top">
         • PECARN ER Dataset<br>
         • Pediatric head trauma<br>
