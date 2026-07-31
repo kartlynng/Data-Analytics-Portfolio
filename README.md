@@ -12,7 +12,7 @@
 * 👩‍💻 **Data Science Committee Member @ WiCDS** — Women in Computing & Data Science ***(always supporting Women in STEM!)***
 * 🎙️ **Starting Point Mentorship Panelist** — Selected as 1 of 4 students to represent UC Berkeley to 100+ transfer students
 
-🎯 **Target Role:** Data Analytics / Data Science Intern
+🎯 **Target Role:** Data Analytics/ Data Science/ Data Engineer Intern
 
 ---
 
