@@ -1,11 +1,11 @@
-# Welcome to My Data Analytics World ✨ 🌸📊
+# Welcome to My Data Analytics World ✨ 🌸
 ---
 ### 👋 Hi there, I'm Kartlyn Nguyen!
 *(also known as **Phuong Trinh Nguyen** ☀️)*
 
 🎓 **University of California, Berkeley** | B.A. Statistics & Data Science
 
-🏆 **Fun Flex:** Proud owner of **3 Associate Degrees** with *Summa Cum Laude* *(Math, Economics, & Natural Sciences)* 🏅 
+🏆 **Fun Flex:** Proud owner of **3 Associate Degrees** with *Summa Cum Laude* *(Math, Economics, & Natural Sciences)* 
 
 📣 **Leadership & Voice:**
 * 💡 **CDSS Student Advisory Board Member** — Advising faculty & shaping the DS experience for 2,000+ Cal students
@@ -20,7 +20,7 @@
 
 I’m an analytics enthusiast who loves turning complex, scary-looking datasets into clean dashboards and actionable stories. Whether I'm wrestling with SQL queries, fitting predictive models, or designing dynamic Excel/Google Sheets reports, I get genuine joy out of solving data puzzles!
 
-I'm currently exploring how Generative AI can enhance the analytics workflow—from data cleaning and exploration to reporting and insight generation. Inspired by Max with Data's demonstrations of AI-powered analytics, I'm pursuing **the Microsoft Generative AI for Data Analysis Professional Certificate** and building projects that showcase practical AI-assisted data analysis alongside traditional analytics techniques.
+👉 I'm currently exploring how Generative AI can enhance the analytics workflow—from data cleaning and exploration to reporting and insight generation. Inspired by Max with Data's demonstrations of AI-powered analytics, I'm pursuing **the Microsoft Generative AI for Data Analysis Professional Certificate** and building projects that showcase practical AI-assisted data analysis alongside traditional analytics techniques.
 
 ---
 
