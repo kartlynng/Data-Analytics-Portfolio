@@ -1,0 +1,6 @@
+# Ignore raw data files
+data/raw/*.csv
+*.zip
+
+# Ignore system files
+.DS_Store
