@@ -131,6 +131,27 @@ I’m an analytics enthusiast who loves turning complex, scary-looking datasets 
     </tr>
     <tr>
       <td valign="top">
+        <a href="https://github.com/kartlynng/Data-Analytics-Portfolio/tree/main/supply-chain-analytics-excel"><b>📦 Supply Chain SLA & Freight Performance</b></a><br>
+      <sub><a href="https://github.com/kartlynng/Data-Analytics-Portfolio/blob/main/supply-chain-analytics-excel/workbook/Supply_Chain_SLA_Freight_Analysis.xlsx">[Excel Workbook ↗]</a></sub>
+      </td>
+      <td valign="top">
+        • Microsoft Excel<br>
+        • Power Query (M)<br>
+        • Power Pivot (M)/ DAX<br>
+        • Star Schema Modeling<br>
+        • Scenario Analysis
+      </td>
+      <td valign="top">
+        • Synthetic star-schema dataset<br>
+        • 1,000 outbound shipments<br>
+        • 6 warehouses / 5 carriers
+      </td>
+      <td valign="top">
+        • The network misses narrowly — 55% of the 165 SLA breaches are exactly one day late, making promise-setting rather than carrier performance the binding constraint.</b>.<br><br>
+        • One buffer day lifts compliance 83.5% → 92.6% and cuts modeled penalty exposure $21,600 → $9,225 (−57%), while the 4.7pp carrier spread at n≈200 is too small to act on.
+      </td>
+    <tr>
+      <td valign="top">
         <a href="https://github.com/kartlynng/Data-Analytics-Portfolio/tree/main/spotify-user-churn"><b>🎵 Spotify Retention Pipeline</b></a><br>
         <sub>🚧 In progress — target September 2026</sub>
       </td>
@@ -146,27 +167,7 @@ I’m an analytics enthusiast who loves turning complex, scary-looking datasets 
       *Coming Soon*
       </td>
     </tr>
-    <tr>
-      <td valign="top">
-        <a href="https://github.com/kartlynng/Data-Analytics-Portfolio/tree/main/silicon-valley-hospitality-analytics"><b>🏠 Silicon Valley Hospitality Analytics</b></a><br>
-        <sub>🚧 In progress — target August 2026</sub>
-      </td>
-      <td valign="top">
-        • Excel<br>
-        • Power Query ETL<br>
-        • Data Modeling<br>
-        • Power Pivot
-      </td>
-      <td valign="top">
-        • 3 relational datasets<br>
-        • Multi-million row time-series<br>
-        • Silicon Valley STR market
-      </td>
-      <td valign="top">
-      *Coming Soon*
-      </td>
-    </tr>
-  </tbody>
+    </tbody>
 </table>
 
 ---
