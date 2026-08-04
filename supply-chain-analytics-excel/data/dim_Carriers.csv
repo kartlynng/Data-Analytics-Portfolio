@@ -1,0 +1,6 @@
+Carrier_ID,Carrier_Name,SLA_Target_Days,Base_Cost_Per_Shipment
+CR-101,Swift Express,2,21.50
+CR-102,Apex Freight,3,16.75
+CR-103,FreightPulse,4,11.40
+CR-104,RailLink Logistics,5,8.25
+CR-105,Velocity Transport,3,18.90

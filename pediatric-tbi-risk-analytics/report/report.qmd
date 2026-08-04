@@ -1,0 +1,127 @@
+---
+title: "Pediatric ciTBI ER Visits: Key EDA Findings"
+author: "Kartlyn Nguyen"
+format: typst
+---
+
+```{r}
+#| include: false
+library(tidyverse)
+citbi <- readRDS("RDS_files/citbi.rds")
+```
+
+## Data Products & Key Findings
+
+### 1. Age Distribution of Pediatric Head Trauma Patients
+
+-   **Questions answered:** "Who is in the dataset? What age ranges dominate pediatric head trauma cases in PECARN?"
+
+```{r}
+#| echo: false
+#| fig-width: 10
+#| fig-height: 3
+patient_age_histogram <- readRDS("RDS_files/patient_age_histogram.rds")
+
+patient_age_histogram
+```
+
+~[**Description:**]{.underline}*This plot shows which age groups most commonly present with head trauma, highlighting high-risk periods for targeted prevention and care.*~
+
+#### Key Takeaways:
+
+-   **Right-skewed**, with the highest concentration among infants (0 - approx. 50 months). A slight, secondary increase occurs during adolescence (150-200 months).
+-   A gradual decline in patient counts after early infancy (around 16 months) through approx. 150 months & The sharp drop at older ages likely reflects the study age cutoff.
+
+### 2. Proportion of Patients with ciTBI by Age (Faceted by Total GCS Score)
+
+-   **Questions answered:** "For patients with similar GCS scores, does age meaningfully change ciTBI risk?"
+
+```{r}
+#| echo: false
+#| fig-width: 6
+#| fig-height: 3
+ciTBI_by_age_facet <- readRDS("RDS_files/ciTBI_by_age_facet.rds")
+
+ciTBI_by_age_facet
+```
+
+~**Description:***This\ faceted\ plot\ shows\ the\ proportion\ of\ patients\ with\ and\ without\ ciTBI\ across\ ages,\ with\ each\ panel\ representing\ a\ different\ total\ Glasgow\ Coma\ Scale\ (GCS)\ score.*~
+
+#### Key Takeaways:
+
+-  When neurological severity (GCS) is held constant, **age does not substantially change the proportion of ciTBI**, while **lower GCS scores consistently show higher ciTBI risk**.
+
+### 3. GCS Score by Age, Colored by ciTBI Outcome
+
+-   **Questions answered:** "How do GCS scores differ between patients with and without ciTBI?"
+
+```{r}
+#| echo: false
+#| fig-width: 6
+#| fig-height: 3
+GCS_score_by_Age_ciTBI <- readRDS("RDS_files/GCS_score_by_Age_ciTBI.rds")
+
+GCS_score_by_Age_ciTBI 
+```
+
+~[**Description:**]{.underline}*This scatter plot displays the relationship between patient age and GCS Total Score, with dots colored by ciTBI outcome.*~
+
+#### Key Takeaways:
+
+- **Higher GCS scores are dominated by non-ciTBI cases**.
+-   **Age does not clearly distinguish ciTBI from non-ciTBI cases**, suggesting **GCS score is a stronger predictor of ciTBI risk** than age alone.
+
+### 4. Loss of Consciousness (LOC) Length and ciTBI Risk
+
+-   **Questions answered:** "Do patients with clinically important traumatic brain injury experience longer loss of consciousness than those without ciTBI?"
+
+```{r}
+#| echo: false
+#| fig-width: 8
+#| fig-height: 3
+LOC_by_ciTBI_bar <- readRDS("RDS_files/LOC_by_ciTBI_bar.rds")
+
+LOC_by_ciTBI_bar
+```
+
+~[**Description:**]{.underline}*This plot compares the distribution of loss of consciousness (LOC) duration between patients with and without ciTBI.*~
+
+#### Key Takeaways:
+
+-   ciTBI risk increases with longer LOC duration.
+-   Patients with **LOC \>5 minutes** show the highest number of ciTBI cases (with 90 TRUE cases).
+
+### 5. Proportion of ciTBI by Clavicle Trauma Status
+
+-   **Questions answered:** “Is ciTBI more likely when clavicle trauma is present?”
+
+```{r}
+#| echo: false
+#| fig-width: 8
+#| fig-height: 3
+clavicle_ciTBI <- citbi |>
+    drop_na(clavicle_trauma, citbi_outcome) |>
+    group_by(clavicle_trauma) |>
+    summarize(
+        count = n(),
+        ciTBI_rate = mean(citbi_outcome == 1)
+    ) |>
+    ggplot(aes(x = clavicle_trauma, y = ciTBI_rate)) +
+    geom_col(fill = "#f5a753ff", width = 0.5) +
+    scale_y_continuous(labels = scales::percent_format()) +
+    labs(
+        title = "Proportion of ciTBI by Clavicle Trauma Status",
+        subtitle = "PECARN Emergency Departments",
+        x = "Clavicle Trauma",
+        y = "Proportion with ciTBI"
+        ) +
+    theme_minimal(base_size = 12)
+
+clavicle_ciTBI 
+```
+
+~***Description:** This figure shows the relationship between the presence of clavicle trauma and ciTBI outcome.*~
+
+#### Key Takeaways:
+
+-   The proportion of ciTBI is higher among patients with clavicle trauma, suggesting an association with increased injury severity.

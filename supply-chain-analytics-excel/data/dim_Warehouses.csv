@@ -1,0 +1,7 @@
+Warehouse_ID,Warehouse_Name,Region,Max_Capacity_Units,Handling_Cost_Per_Unit
+WH-001,Newark Distribution Center,US-East,68500,$2.15
+WH-002,Atlanta Fulfillment Hub,US-South,52400,$1.65
+WH-003,Columbus Regional Depot,US-Central,45900,$1.42
+WH-004,Reno Cross-Dock Facility,US-West,31200,$2.68
+WH-005,Dallas Consolidation Center,US-South,74300,$1.28
+WH-006,Tacoma Coastal Warehouse,US-West,27800,$2.44
