@@ -64,8 +64,7 @@ The headline result is not "which carrier is worst." It is that **the network mi
 > - **Synthetic data.** Patterns in this dataset were generated, not observed. No finding here should be read as a claim about real carrier or warehouse performance.
 > - **Ship date, not delivery date.** The fact table records when a shipment *left* the warehouse against when it was *promised to leave*. This measures fulfilment and dock performance — **not transit time or delivery reliability.** The word "delivery" is deliberately avoided throughout the workbook.
 > - **No penalty field exists in the data.** The `$75 per breach-day` rate used in `Modeled Penalty Exposure` is an **illustrative assumption declared on the `Assumptions` tab**, not a contractual figure. Every penalty number in this project is a modeled scenario, not a measured cost.
-> - **`Max_Capacity_Units` and `Handling_Cost_Per_Unit` are unusable.** Both are expressed per *unit*, but the fact table records *weight*, not units. There is no join path between them, so **no capacity-utilization or handling-cost analysis is possible.** These columns are documented and deliberately left unanalyzed.
-> - **Small per-segment samples.** Each carrier covers only ~190–210 shipments. The full carrier spread is 4.7 percentage points, which is well inside what sampling noise can produce at this size — see Finding 3.
+> - **`Max_Capacity_Units` and `Handling_Cost_Per_Unit` are unusable.**
 > - **Early shipments count as on-time.** Shipping ahead of the promise date is treated as compliant, not as a separate variance category.
 
 ---
@@ -179,7 +178,7 @@ Rates are computed as **measures over the full filter context**, never as an ave
 ---
 ## 📊 Dashboard
 <p align="center">
-  <img src="docs/images/Overview_Dashboard.png" alt="Overview Dashboard" width="100%" />
+  <img src="docs/images/Overview_Dashboard_HD.png" alt="Overview Dashboard" width="100%" />
 </p>
 
 The `Overview` tab is a single screen, organized into four numbered sections, driven by four filter slicers:
@@ -196,13 +195,17 @@ Every chart is fed from the `Helper` tab rather than directly from a pivot, so s
 ---
 ## 💡 Key Findings & Strategic Recommendations
 
+<p align="center">
+  <img src="docs/images/Actionable_Insights.png" alt="Overview Dashboard" width="100%" />
+</p>
+
 #### 1. The network runs 6.5 points below target, and only cleared it once in twelve months.
 Pooled on-time ship rate is **83.5% against a 90% target** — 165 breaches out of 1,000 shipments. Monthly compliance ranged from **76.9% (Nov-25)** to **92.3% (Jul-26)**, and July was the only month above target. The eleven-month climb from the November trough is a real recovery, but a single month above threshold is not a trend.
 
 * **Recommendation:** Treat Jul-26 as the reference month rather than the new baseline. Document what changed in scheduling and staffing that month and hold a monthly SLA review before declaring the target met.
 
 #### 2. The network misses narrowly — 55% of breaches are exactly one day late.
-Of 165 breaches, **91 miss by a single day**. Total breach exposure is **288 breach-days**, an average of **1.75 days when late**, and only 33 shipments (3.3% of volume) miss by three days or more. This is the central finding of the project: the failure mode is a **promise-setting problem, not a capability problem.**
+Of 165 breaches, **91 miss by a single day**. Total breach exposure is **288 breach-days**, an average of **1.75 days when late**, and only 33 shipments (3.3% of volume) miss 3+ days. This is the central finding of the project: the failure mode is a **promise-setting problem, not a capability problem.**
 
 * **Recommendation:** Add **one buffer day** to the promise window on structurally late lanes. Modeled impact: compliance rises **83.5% → 92.6%**, breach-days fall **288 → 123**, and modeled penalty exposure drops **$21,600 → $9,225 — a 57% reduction** — without changing a single operational process. Validate against customer-facing commitments before implementing; a wider promise window is a service-level trade, not a free win.
 
