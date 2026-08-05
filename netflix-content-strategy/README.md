@@ -14,6 +14,13 @@
 This project performs an end-to-end data engineering and analytical review of the **Netflix Movies & TV Shows dataset** (sourced from Kaggle). Utilizing **Google BigQuery**, raw streaming data was cleaned, standardized, and analyzed to uncover operational catalog dynamics, audience profiling trends, regional production footprints, and licensing growth velocity.
 
 ---
+## 🎯 Business Problem & Objectives
+Netflix operates in an increasingly saturated streaming market where subscriber growth depends heavily on optimized content libraries. This project answers critical strategic questions:
+1. **Where should budget be allocated?** (Movies vs. TV Shows, and by genre).
+2. **How does release timing impact catalog performance?** 
+3. **What regional gaps exist in the current global content distribution?**
+
+---
 ## 🛠️ Tools & Technologies Used
 * **Database / Engine:** Google BigQuery (SQL)
 * **Dataset Source:** [Kaggle - Netflix Movies & TV Shows](https://www.kaggle.com/datasets/shivamb/netflix-shows)
