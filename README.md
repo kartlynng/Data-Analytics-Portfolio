@@ -150,6 +150,29 @@ I’m an analytics enthusiast who loves turning complex, scary-looking datasets 
         • The network misses narrowly — 55% of the 165 SLA breaches are exactly one day late, making promise-setting rather than carrier performance the binding constraint.</b>.<br><br>
         • One buffer day lifts compliance 83.5% → 92.6% and cuts modeled penalty exposure $21,600 → $9,225 (−57%), while the 4.7pp carrier spread at n≈200 is too small to act on.
       </td>
+    </tr>
+    <tr>
+      <td valign="top">
+        <a href="https://github.com/kartlynng/Data-Analytics-Portfolio/tree/main/job-application-tracker-excel"><b>📋 Job Application Tracker & Dashboard</b></a><br>
+        <sub><a href="https://github.com/kartlynng/Data-Analytics-Portfolio/blob/main/job-application-tracker-excel/Job-Tracker-Dashboard.xlsx">Excel Workbook ↗</a></sub>
+      </td>
+      <td valign="top">
+        • Microsoft Excel<br>
+        • Structured Tables<br>
+        • Conditional Formatting<br>
+        • Data Validation<br>
+        • Array Formulas (SUMPRODUCT)
+      </td>
+      <td valign="top">
+        • 33 synthetic applications<br>
+        • 12 tracked fields<br>
+        • 6 KPI cards + 5-chart dashboard
+      </td>
+      <td valign="top">
+        • A rolling 6-month trend chart re-anchors itself to the most recent application via <code>EOMONTH(MAX(...))</code> — zero hardcoded dates, zero manual chart edits.<br><br>
+        • Skill-frequency counts use <b>SUMPRODUCT + SEARCH</b> with delimiter padding to kill substring false positives (e.g. "SQL" matching inside "NoSQL") — all 6 KPIs and 5 charts run on live formulas over one table, no VBA required.
+      </td>
+    </tr>
     <tr>
       <td valign="top">
         <a href="https://github.com/kartlynng/Data-Analytics-Portfolio/tree/main/spotify-user-churn"><b>🎵 Spotify Retention Pipeline</b></a><br>
