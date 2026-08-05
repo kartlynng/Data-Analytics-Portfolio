@@ -154,7 +154,7 @@ I’m an analytics enthusiast who loves turning complex, scary-looking datasets 
     <tr>
       <td valign="top">
         <a href="https://github.com/kartlynng/Data-Analytics-Portfolio/tree/main/job-application-tracker-excel"><b>📋 Job Application Tracker & Dashboard</b></a><br>
-        <sub><a href="https://github.com/kartlynng/Data-Analytics-Portfolio/blob/main/job-application-tracker-excel/Job-Tracker-Dashboard.xlsx">Excel Workbook ↗</a></sub>
+        <sub><a href="https://github.com/kartlynng/Data-Analytics-Portfolio/blob/main/job-application-tracker-excel/Job-Tracker-Dashboard.xlsx">[Excel Workbook ↗]</a></sub>
       </td>
       <td valign="top">
         • Microsoft Excel<br>
