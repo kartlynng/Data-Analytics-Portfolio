@@ -7,7 +7,7 @@ An Excel-native tracker that turns a job search into a measurable funnel — 12 
 ---
 ## Why I built it?
 
-Spreadsheets full of job applications are easy to start and impossible to learn from. I wanted three questions answered without re-counting rows by hand:
+I wanted 3 questions answered without re-counting rows by hand:
 
 - Which stage is my funnel actually leaking at?
 - Is my application volume trending up or down month over month?
